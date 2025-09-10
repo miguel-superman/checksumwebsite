@@ -1,0 +1,299 @@
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
+
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    propertyType: '',
+    message: ''
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here - would integrate with backend
+    console.log('Form submitted:', formData);
+  };
+
+  return (
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="section-padding bg-gradient-hero">
+        <div className="container-section">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h1 className="text-hero text-foreground">
+              Contact Our Security 
+              <span className="text-accent"> Experts</span>
+            </h1>
+            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+              Ready to secure your property? Get in touch with our team for a free consultation 
+              and custom security solution designed for your needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button variant="cta" size="xl" asChild>
+                <a href="https://wa.me/18765550123" className="flex items-center gap-2">
+                  <MessageCircle className="h-5 w-5" />
+                  WhatsApp Now
+                </a>
+              </Button>
+              <Button variant="minimal" size="xl" asChild>
+                <a href="tel:+1876-555-0123" className="flex items-center gap-2">
+                  <Phone className="h-5 w-5" />
+                  Call (876) 555-0123
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className="section-padding">
+        <div className="container-section">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Contact Form */}
+            <div className="lg:col-span-2">
+              <Card className="card-gradient">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Get Your Free Security Quote</CardTitle>
+                  <p className="text-muted-foreground">
+                    Fill out the form below and our security experts will contact you within 24 hours 
+                    to schedule your free on-site assessment.
+                  </p>
+                </CardHeader>
+                <CardContent>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">Full Name *</Label>
+                        <Input
+                          id="name"
+                          placeholder="Your full name"
+                          value={formData.name}
+                          onChange={(e) => handleInputChange('name', e.target.value)}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email Address *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          placeholder="your@email.com"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange('email', e.target.value)}
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Phone Number *</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          placeholder="+1 (876) 555-0123"
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange('phone', e.target.value)}
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="service">Service Interested In</Label>
+                        <Select value={formData.service} onValueChange={(value) => handleInputChange('service', value)}>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select a service" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="cctv">CCTV Systems</SelectItem>
+                            <SelectItem value="access-control">Access Control</SelectItem>
+                            <SelectItem value="alarm-monitoring">Alarm Monitoring</SelectItem>
+                            <SelectItem value="networking">Network Solutions</SelectItem>
+                            <SelectItem value="complete-package">Complete Security Package</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="propertyType">Property Type</Label>
+                      <Select value={formData.propertyType} onValueChange={(value) => handleInputChange('propertyType', value)}>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select property type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="residential">Residential Home</SelectItem>
+                          <SelectItem value="apartment">Apartment/Condo</SelectItem>
+                          <SelectItem value="office">Office Building</SelectItem>
+                          <SelectItem value="retail">Retail Store</SelectItem>
+                          <SelectItem value="warehouse">Warehouse/Industrial</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        placeholder="Tell us about your security needs, property size, current concerns, or any specific requirements..."
+                        rows={4}
+                        value={formData.message}
+                        onChange={(e) => handleInputChange('message', e.target.value)}
+                      />
+                    </div>
+
+                    <Button type="submit" variant="hero" size="lg" className="w-full">
+                      <Send className="h-5 w-5 mr-2" />
+                      Send Message & Schedule Assessment
+                    </Button>
+
+                    <p className="text-xs text-muted-foreground text-center">
+                      By submitting this form, you agree to our privacy policy and consent to being contacted 
+                      by our team regarding your security needs.
+                    </p>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-6">
+              {/* Contact Details */}
+              <Card className="card-gradient">
+                <CardHeader>
+                  <CardTitle>Get in Touch</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                      <Phone className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Call Us</p>
+                      <a href="tel:+1876-555-0123" className="text-sm text-muted-foreground hover:text-accent">
+                        +1 (876) 555-0123
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                      <Mail className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Email</p>
+                      <a href="mailto:info@checksum.jm" className="text-sm text-muted-foreground hover:text-accent">
+                        info@checksum.jm
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                      <MapPin className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Office</p>
+                      <p className="text-sm text-muted-foreground">
+                        123 Security Drive<br />
+                        Kingston, Jamaica
+                      </p>
+                    </div>
+                  </div>
+
+                  <Button variant="cta" className="w-full" asChild>
+                    <a href="https://wa.me/18765550123" className="flex items-center gap-2 justify-center">
+                      <MessageCircle className="h-4 w-4" />
+                      WhatsApp Us Now
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Business Hours */}
+              <Card className="card-gradient">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Clock className="h-5 w-5 text-accent" />
+                    Business Hours
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Monday - Friday</span>
+                    <span className="text-sm font-medium">8:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Saturday</span>
+                    <span className="text-sm font-medium">9:00 AM - 4:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Sunday</span>
+                    <span className="text-sm font-medium">Emergency Only</span>
+                  </div>
+                  <div className="border-t border-border pt-3 mt-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-accent">Emergency Support</span>
+                      <span className="text-sm font-medium text-accent">24/7 Available</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Service Areas */}
+              <Card className="card-gradient">
+                <CardHeader>
+                  <CardTitle>Service Areas</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p>• Kingston & St. Andrew</p>
+                    <p>• Spanish Town</p>
+                    <p>• Portmore</p>
+                    <p>• Mandeville</p>
+                    <p>• Montego Bay</p>
+                    <p>• And surrounding areas</p>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-4">
+                    Don't see your area? Contact us - we may still be able to serve you.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-8">
+        <div className="container-section">
+          <Card className="overflow-hidden">
+            <div className="h-96 bg-muted flex items-center justify-center">
+              <div className="text-center space-y-2">
+                <MapPin className="h-12 w-12 text-accent mx-auto" />
+                <p className="font-medium">Interactive Map</p>
+                <p className="text-sm text-muted-foreground">Google Maps integration would be embedded here</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default ContactPage;
