@@ -1,5 +1,9 @@
+"use client";
+
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Shield, Phone, MessageCircle } from 'lucide-react';
 
@@ -17,15 +21,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 p-2 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container-section">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-accent" />
+          <Link href="/" className="flex items-center space-x-2">
+            {/* <Shield className="h-8 w-8 text-accent" /> */}
+            <img src='checksum-logo.png' alt='checksum logo' className='h-20 w-20' />
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-none">Checksum</span>
-              <span className="text-xs text-muted-foreground leading-none">Smart Security</span>
+              <span className="text-xs text-muted-foreground leading-none">Smart Security Solutions Ltd.</span>
+              
             </div>
           </Link>
 
@@ -34,7 +40,7 @@ const Header = () => {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                to={item.path}
+                href={item.path}
                 className="text-sm font-medium text-foreground hover:text-accent transition-colors"
               >
                 {item.name}
@@ -79,7 +85,7 @@ const Header = () => {
               {navItems.map((item) => (
                 <Link
                   key={item.name}
-                  to={item.path}
+                  href={item.path}
                   className="text-foreground hover:text-accent transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >

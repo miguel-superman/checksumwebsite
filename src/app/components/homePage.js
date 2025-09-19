@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ServiceCard from '../components/serviceCard';
+import Carousel from './Carousel';
 import { 
   Shield, 
   Camera, 
@@ -19,6 +20,8 @@ import {
   Phone,
   MessageCircle
 } from 'lucide-react';
+
+import ImageCarousel from './ImageCarousel';
 
 const HomePage = () => {
   const services = [
@@ -100,12 +103,47 @@ const HomePage = () => {
     }
   ];
 
+
+  const slides = [
+    "/checksum-logo.png",
+    "/card.png",
+    "/install.jpg",
+    "/monitor.jpg",
+  ];
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen p-4 bg-gradient-to-b from-teal-500 via-black to-white ">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-background/80" />
         <div className="container-section relative">
+          <ImageCarousel slides={slides} />
+          <Carousel>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="min-w-full px-4 md:min-w-[33.3333%]">
+                <Card className="card-gradient h-full">
+                  <CardContent className="p-6 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-5 w-5 text-accent fill-current" />
+                        ))}
+                      </div>
+                      <p className="text-muted-foreground mb-4 italic">
+                        "{testimonial.content}"
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </Carousel>
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-hero text-foreground">
               Smart Security Solutions for 
