@@ -112,15 +112,15 @@ const HomePage = () => {
   ];
 
   return (
-    <main className="min-h-screen p-4 bg-gradient-to-b from-teal-500 via-black to-white ">
+    <main className="min-h-screen bg-gradient-to-b from-teal-500 via-black to-white">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-background/80" />
-        <div className="container-section relative">
+        <div className="container-section relative my-4 mx-8">
           <ImageCarousel slides={slides} />
           <Carousel>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="min-w-full px-4 md:min-w-[33.3333%]">
+              <div key={index} className="min-w-full px-4 md:min-w-[33.3333%] my-8">
                 <Card className="card-gradient h-full">
                   <CardContent className="p-6 flex flex-col justify-between">
                     <div>
@@ -144,7 +144,7 @@ const HomePage = () => {
               </div>
             ))}
           </Carousel>
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="max-w-4xl mx-auto text-center space-y-8 my-8">
             <h1 className="text-hero text-foreground">
               Smart Security Solutions for 
               <span className="text-accent"> Jamaica</span>

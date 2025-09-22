@@ -46,7 +46,7 @@ const Carousel = ({ children }) => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="w-full">
+    <div className="w-full my-10">
       {/* Carousel */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">{children}</div>

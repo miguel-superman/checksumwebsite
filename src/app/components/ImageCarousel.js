@@ -44,7 +44,7 @@ const ImageCarousel = ({ slides }) => {
       </div>
 
       {/* Dots navigation */}
-      <div className="flex justify-center mt-4 space-x-2">
+      <div className="flex justify-center mt-8 space-x-2">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
