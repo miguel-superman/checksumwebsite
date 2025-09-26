@@ -7,7 +7,7 @@ const ServiceCard = ({ icon: Icon, title, description, features, href }) => {
     <Card className="card-gradient hover:shadow-glow transition-all duration-300 group">
       <CardHeader className="text-center pb-4">
         <div className="mx-auto mb-4 w-16 h-16 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-          <Icon className="h-8 w-8 text-accent" />
+          <Icon className="h-8 w-8 text-teal-500" />
         </div>
         <CardTitle className="text-xl">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>

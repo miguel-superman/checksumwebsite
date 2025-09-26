@@ -189,8 +189,8 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-card">
-        <div className="container-section">
+      <section className="section-padding bg-card p-4">
+        <div className="container-section mb-8">
           <div className="text-center mb-16">
             <h2 className="text-heading mb-4">Our Security Services</h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
@@ -206,10 +206,10 @@ const HomePage = () => {
       </section>
 
       {/* Industries Section */}
-      <section className="section-padding">
+      <section className="section-padding p-4">
         <div className="container-section">
           <div className="text-center mb-16">
-            <h2 className="text-heading mb-4">Industries We Serve</h2>
+            <h2 className="text-heading font-extrabold text-white text-2xl mb-4">Industries We Serve</h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
               Specialized security solutions for different sectors across Jamaica
             </p>
@@ -231,7 +231,7 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding bg-card">
+      <section className="section-padding bg-card p-4">
         <div className="container-section">
           <div className="text-center mb-16">
             <h2 className="text-heading mb-4">What Our Clients Say</h2>
@@ -261,8 +261,8 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-hero">
-        <div className="container-section text-center">
+      {/* <section className="section-padding bg-gradient-hero p-4">
+        <div className="container-section text-center mb-28 mt-28">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-heading text-foreground">Ready to Secure Your Property?</h2>
             <p className="text-body-large text-muted-foreground">
@@ -282,7 +282,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 };
