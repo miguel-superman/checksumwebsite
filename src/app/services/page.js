@@ -164,8 +164,8 @@ const ServicesPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <Card className="card-gradient text-center">
                         <CardContent className="p-8">
-                            <div className="mx-auto mb-4 w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                            <CheckCircle className="h-8 w-8 text-accent" />
+                            <div className="mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
+                            <CheckCircle className="h-8 w-8 text-teal-500" />
                             </div>
                             <h3 className="font-semibold text-lg mb-3">Licensed & Certified</h3>
                             <p className="text-sm text-muted-foreground">
@@ -176,8 +176,8 @@ const ServicesPage = () => {
 
                         <Card className="card-gradient text-center">
                         <CardContent className="p-8">
-                            <div className="mx-auto mb-4 w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                            <span className="text-2xl font-bold text-accent">10+</span>
+                            <div className="mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
+                            <span className="text-2xl font-bold text-teal-500">10+</span>
                             </div>
                             <h3 className="font-semibold text-lg mb-3">Years of Experience</h3>
                             <p className="text-sm text-muted-foreground">
@@ -188,8 +188,8 @@ const ServicesPage = () => {
 
                         <Card className="card-gradient text-center">
                         <CardContent className="p-8">
-                            <div className="mx-auto mb-4 w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center">
-                            <span className="text-lg font-bold text-accent">24/7</span>
+                            <div className="mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
+                            <span className="text-lg font-bold text-teal-500">24/7</span>
                             </div>
                             <h3 className="font-semibold text-lg mb-3">Round-the-Clock Support</h3>
                             <p className="text-sm text-muted-foreground">

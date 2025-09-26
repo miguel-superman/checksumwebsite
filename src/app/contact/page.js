@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,6 +8,8 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
+import Footer from '../components/footer';
+import Header from '../components/header';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -28,16 +32,18 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="min-h-screen">
+    <>
+      <Header />
+      <main className="min-h-screen bg-gradient-to-b from-teal-500 via-black to-white">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-hero">
-        <div className="container-section">
+        <div className="container-section p-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-hero text-foreground">
+            <h1 className="text-hero text-7xl text-foreground">
               Contact Our Security 
               <span className="text-accent"> Experts</span>
             </h1>
-            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-body-large text-gray-700 text-lg max-w-2xl mx-auto">
               Ready to secure your property? Get in touch with our team for a free consultation 
               and custom security solution designed for your needs.
             </p>
@@ -62,12 +68,12 @@ const ContactPage = () => {
       {/* Contact Form & Info */}
       <section className="section-padding">
         <div className="container-section">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 p-4">
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <Card className="card-gradient">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Get Your Free Security Quote</CardTitle>
+                  <CardTitle className="text-2xl">Get Your Security Quote</CardTitle>
                   <p className="text-muted-foreground">
                     Fill out the form below and our security experts will contact you within 24 hours 
                     to schedule your free on-site assessment.
@@ -184,8 +190,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-medium">Call Us</p>
-                      <a href="tel:+1876-555-0123" className="text-sm text-muted-foreground hover:text-accent">
-                        +1 (876) 555-0123
+                      <a href="tel:+1876-859-2783" className="text-sm text-muted-foreground hover:text-accent">
+                        +1 (876) 859-2783
                       </a>
                     </div>
                   </div>
@@ -196,8 +202,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:info@checksum.jm" className="text-sm text-muted-foreground hover:text-accent">
-                        info@checksum.jm
+                      <a href="mailto:sales@cs3.ltd" className="text-sm text-muted-foreground hover:text-accent">
+                        sales@cs3.ltd
                       </a>
                     </div>
                   </div>
@@ -209,8 +215,8 @@ const ContactPage = () => {
                     <div>
                       <p className="font-medium">Office</p>
                       <p className="text-sm text-muted-foreground">
-                        123 Security Drive<br />
-                        Kingston, Jamaica
+                        {/* 9 <br /> */}
+                        Portmore, Jamaica
                       </p>
                     </div>
                   </div>
@@ -293,6 +299,9 @@ const ContactPage = () => {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
+    
   );
 };
 
