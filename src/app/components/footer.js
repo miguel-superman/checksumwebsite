@@ -31,13 +31,24 @@ const Footer = () => {
 
             <div className="flex space-x-3">
               <Button variant="ghost" size="icon">
-                <Facebook className="h-4 w-4" />
+                <Link    
+                href={"https://www.facebook.com/share/19MV6Xar1x/"}>
+                  <Facebook className="h-4 w-4" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon">
-                <Instagram className="h-4 w-4" />
+                <Link
+                href={"https://www.instagram.com/checksum_smart_security/"}
+                >
+                  <Instagram className="h-4 w-4" />                
+                </Link>
+                
               </Button>
               <Button variant="ghost" size="icon">
-                <Linkedin className="h-4 w-4" />
+                <Link    
+                href={"https://www.linkedin.com/in/checksum-smart-security-solutions-27593a233/"}>
+                   <Linkedin className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -68,9 +79,9 @@ const Footer = () => {
               <Link href="/about" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 About Us
               </Link>
-              <Link href="/case-studies" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              {/* <Link href="/case-studies" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Case Studies
-              </Link>
+              </Link> */}
               <Link href="/careers" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Careers
               </Link>
@@ -92,8 +103,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-accent" />
-                <a href="mailto:info@checksum.jm" className="hover:text-accent transition-colors">
-                  info@checksum.jm
+                <a href="mailto:sales@cs3.ltd" className="hover:text-accent transition-colors">
+                  sales@cs3.ltd
                 </a>
               </div>
               <div className="flex items-start space-x-2 text-sm text-muted-foreground">
