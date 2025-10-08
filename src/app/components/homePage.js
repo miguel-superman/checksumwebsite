@@ -112,7 +112,7 @@ const HomePage = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-teal-500 via-black to-white">
+    <main className="min-h-screen bg-gradient-to-b from-teal-500 via-gray to-white">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-background/80" />
@@ -189,10 +189,10 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-card p-4">
+      <section className="section-padding bg-card p-4 pb-20 pt-20">
         <div className="container-section mb-8">
           <div className="text-center mb-16">
-            <h2 className="text-heading mb-4">Our Security Services</h2>
+            <h2 className="text-heading font-extrabold text-gray-500 text-2xl mb-4">Our Security Services</h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
               Comprehensive security solutions tailored to protect what matters most to you
             </p>
@@ -206,10 +206,14 @@ const HomePage = () => {
       </section>
 
       {/* Industries Section */}
-      <section className="section-padding p-4">
+      <section className="section-padding p-4 pb-20 pt-20">
         <div className="container-section">
+
+          <div className="h-64 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+          </div>
           <div className="text-center mb-16">
-            <h2 className="text-heading font-extrabold text-white text-2xl mb-4">Industries We Serve</h2>
+            <h2 className="text-heading font-extrabold text-gray-700 text-2xl mb-4">Industries We Serve</h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
               Specialized security solutions for different sectors across Jamaica
             </p>
@@ -227,14 +231,17 @@ const HomePage = () => {
               </Card>
             ))}
           </div>
+
+          <div className="h-96 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding bg-card p-4">
+      <section className="section-padding bg-card p-4  pb-20 pt-20">
         <div className="container-section">
           <div className="text-center mb-16">
-            <h2 className="text-heading mb-4">What Our Clients Say</h2>
+            <h2 className="text-heading font-extrabold text-gray-500 text-2xl mb-4">What Our Clients Say</h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
               Trusted by hundreds of homes and businesses across Jamaica
             </p>

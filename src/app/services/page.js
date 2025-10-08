@@ -205,8 +205,8 @@ const ServicesPage = () => {
                 <section className="section-padding bg-gradient-hero p-4">
                     <div className="container-section text-center">
                         <div className="max-w-3xl mx-auto space-y-6">
-                            <h2 className="text-heading text-foreground">Ready to Get Started?</h2>
-                            <p className="text-body-large text-muted-foreground">
+                            <h2 className="text-heading mt-8 mb-4 text-4xl text-foreground">Ready to Get Started?</h2>
+                            <p className="text-body-large text-2xl text-muted-foreground">
                             Contact us today for a free security assessment and custom quote. 
                             Our security experts will design the perfect solution for your property.
                             </p>

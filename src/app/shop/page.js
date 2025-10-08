@@ -713,9 +713,9 @@ const ShopPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-gradient-to-b from-teal-500 via-gray to-white">
         {/* Search + Filter + Cart */}
-        <section className="py-8 bg-card border-b border-border">
+        <section className="py-8 bg-card border-b border-border bg-gradient-to-b from-teal-500 via-gray to-white">
           <div className="container-section p-4 flex flex-col md:flex-row gap-4 items-center">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-4 w-4" />
@@ -726,7 +726,7 @@ const ShopPage = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 ">
               <Filter className="h-4 w-4 text-muted-foreground" />
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="w-48">

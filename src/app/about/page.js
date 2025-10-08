@@ -6,6 +6,7 @@ import { Users, Shield, Target, Star, Award, Briefcase } from 'lucide-react';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const AboutPage = () => {
   return (
@@ -32,7 +33,7 @@ const AboutPage = () => {
             <Card className="card-gradient text-center">
               <CardHeader>
                 <Shield className="w-10 h-10 text-accent mx-auto" />
-                <CardTitle>Our Mission</CardTitle>
+                <CardTitle className={"text-2xl"}>Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -44,7 +45,7 @@ const AboutPage = () => {
             <Card className="card-gradient text-center">
               <CardHeader>
                 <Target className="w-10 h-10 text-accent mx-auto" />
-                <CardTitle>Our Vision</CardTitle>
+                <CardTitle className={"text-2xl"}>Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -56,7 +57,7 @@ const AboutPage = () => {
             <Card className="card-gradient text-center">
               <CardHeader>
                 <Star className="w-10 h-10 text-accent mx-auto" />
-                <CardTitle>Our Values</CardTitle>
+                <CardTitle className={"text-2xl"}>Our Values</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-muted-foreground text-sm">
@@ -113,17 +114,32 @@ const AboutPage = () => {
               Together, we work to deliver the highest standard of safety and reliability.
             </p> */}
 
-            <h1 className="text-teal-200 text-6xl md:text-7xl font-bold">
-              Who <span className="text-accent">We Are</span>
-            </h1>
+            <div className='justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8'>
+              <div>
 
-             <p className="text-white font-bold ext-lg max-w-2xl mx-auto">
-                Established in 2021, Checksum Smart Security Solutions Limited (CS³) was founded by a group of Information Technology (IT) specialists, unified by a vision, mutual desires and abilities, to address growing technological needs for IT products and services in the Caribbean and, by extension, the world. 
+                <h1 className="text-teal-200 text-6xl md:text-7xl font-bold mb-7 md:mb-32">
+                  Who <span className="text-accent">We Are</span>
+                </h1>
 
-                Checksum’s initial focus mainly consisted of Closed-circuit Television (CCTV) surveillance and motor vehicle camera system products and services. As Checksum continues to develop, its focus has expanded to include Information Communication and Technology (ICT) infrastructure consultation, installation and support, cloud infrastructure implementation and support, as well as IT training and smart technological solutions.
+                <p className="text-white font-bold ext-lg max-w-2xl mx-auto">
+                    Established in 2021, Checksum Smart Security Solutions Limited (CS³) was founded by a group of Information Technology (IT) specialists, unified by a vision, mutual desires and abilities, to address growing technological needs for IT products and services in the Caribbean and, by extension, the world. 
 
-                With the qualifications, skills and principles possessed by the members of the Checksum team, Checksum is equipped and aims to provide the greatest degree of credibility and quality within the ICT space.
-            </p>
+                    Checksum’s initial focus mainly consisted of Closed-circuit Television (CCTV) surveillance and motor vehicle camera system products and services. As Checksum continues to develop, its focus has expanded to include Information Communication and Technology (ICT) infrastructure consultation, installation and support, cloud infrastructure implementation and support, as well as IT training and smart technological solutions.
+
+                    With the qualifications, skills and principles possessed by the members of the Checksum team, Checksum is equipped and aims to provide the greatest degree of credibility and quality within the ICT space.
+                </p>
+                
+              </div>
+              <div>
+                <Image src={"/checksum-logo.png"}
+                width={1040}
+                height={1050}
+                  alt="checksum logo"
+                />
+              </div>
+
+              
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
               {[ 
