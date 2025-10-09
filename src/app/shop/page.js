@@ -1785,7 +1785,12 @@ const ShopPage = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-96 overflow-y-auto p-4">
                 <SheetHeader>
-                  <SheetTitle className="text-lg font-semibold">Your Cart</SheetTitle>
+                  <div className='flex flex-row justify-items-center items-center'>
+
+                    <img src='checksum-logo.png' alt='checksum logo' className='h-20 w-20' />
+                    <SheetTitle className="text-lg font-semibold">Your Cart</SheetTitle>
+
+                  </div>
                 </SheetHeader>
                 <div className="mt-4 space-y-4">
                   {cart.length === 0 ? (
@@ -1816,8 +1821,8 @@ const ShopPage = () => {
                       <span>Subtotal</span>
                       <span className="font-semibold">{formatPrice(cartTotal)}</span>
                     </p>
-                    <Button className="w-full" variant="cta">Checkout</Button>
-                    <Button className="w-full" variant="outline" onClick={clearCart}>Clear Cart</Button>
+                    <Button className="w-full bg-teal-400" variant="cta">Checkout</Button>
+                    <Button className="w-full hover:bg-red-500 hover:text-white" variant="outline" onClick={clearCart}>Clear Cart</Button>
                   </div>
                 )}
               </SheetContent>

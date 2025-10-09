@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Shield, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Shield, Phone, MessageCircle ,Package, LetterTextIcon } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,19 +51,24 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="sm" asChild>
-              <a href="tel:+1876-555-0123" className="flex items-center gap-2">
+              <Link href="tel:+1876-859-2783" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 Call Now
-              </a>
+              </Link>
             </Button>
             <Button variant="cta" size="sm" asChild>
-              <a href="https://wa.me/18765550123" className="flex items-center gap-2">
+              <Link href="https://wa.me/18768592783" className="flex items-center gap-2">
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
-              </a>
+              </Link>
             </Button>
             <Button variant="hero" size="sm">
-              Request Quote
+
+              <Link href="/contact" className="flex items-center gap-2">
+                <Package className="h-4 w-4" />
+                Request Quote
+              </Link>
+              
             </Button>
           </div>
 

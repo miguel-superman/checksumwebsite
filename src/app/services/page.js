@@ -202,7 +202,7 @@ const ServicesPage = () => {
                 </section>
 
                 {/* CTA Section */}
-                <section className="section-padding bg-gradient-hero p-4">
+                <section className="section-padding bg-gradient-hero py-10">
                     <div className="container-section text-center">
                         <div className="max-w-3xl mx-auto space-y-6">
                             <h2 className="text-heading mt-8 mb-4 text-4xl text-foreground">Ready to Get Started?</h2>
@@ -212,7 +212,7 @@ const ServicesPage = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <Button variant="hero" size="xl">
-                                Schedule Free Assessment
+                                Schedule An Assessment
                             </Button>
                             <Button variant="cta" size="xl">
                                 Call (876) 555-0123

@@ -57,16 +57,16 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Services</h3>
             <div className="space-y-2">
-              <Link href="/services/cctv" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 CCTV Systems
               </Link>
-              <Link href="/services/access-control" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Access Control
               </Link>
-              <Link href="/services/alarm-monitoring" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Alarm Monitoring
               </Link>
-              <Link href="/services/networking" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Networking Solutions
               </Link>
             </div>
@@ -82,12 +82,12 @@ const Footer = () => {
               {/* <Link href="/case-studies" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Case Studies
               </Link> */}
-              <Link href="/careers" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              {/* <Link href="/careers" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Careers
               </Link>
               <Link href="/faqs" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 FAQs
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -97,8 +97,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-accent" />
-                <a href="tel:+18765550123" className="hover:text-accent transition-colors">
-                  +1 (876) 555-0123
+                <a href="tel:+1876859-2783" className="hover:text-accent transition-colors">
+                  +1 (876) 859-2783
                 </a>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -112,7 +112,7 @@ const Footer = () => {
                 <span>Kingston, Jamaica</span>
               </div>
               <Button variant="cta" size="sm" className="w-full" asChild>
-                <a href="https://wa.me/18765550123" className="flex items-center gap-2 justify-center">
+                <a href="https://wa.me/18768592783" className="flex items-center gap-2 justify-center">
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp Us
                 </a>

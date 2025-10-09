@@ -12,7 +12,7 @@ const AboutPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-teal-500 via-black to-white">
+      <main className="min-h-screen bg-gradient-to-b from-teal-300 via-black to-white">
         
         {/* Hero Section */}
         <section className="section-padding bg-gradient-hero ">
@@ -72,7 +72,7 @@ const AboutPage = () => {
         </section>
 
         {/* Timeline / Experience */}
-        <section className="section-padding bg-gradient-to-r from-teal-600 to-black">
+        <section className="section-padding ">
           <div className="container-section p-6">
             <Card className="card-gradient">
               <CardHeader>
@@ -106,7 +106,7 @@ const AboutPage = () => {
         </section>
 
         {/* Team Section */}
-        <section className="section-padding bg-gradient-to-r from-teal-600 to-black">
+        <section className="section-padding">
           <div className="container-section text-center space-y-6 p-4">
             {/* <h2 className="text-4xl font-bold">Meet Our Team</h2> */}
             {/* <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -162,8 +162,8 @@ const AboutPage = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="section-padding bg-gradient-to-r from-teal-600 to-black">
-          <div className="container-section text-center space-y-6 text-white p-6">
+        <section className="section-padding ">
+          <div className="container-section text-center space-y-6 text-gray-600 p-6">
             <h2 className="text-3xl font-bold">Ready to Secure Your Future?</h2>
             <p className="max-w-xl mx-auto text-lg">
               Contact our experts today for a free consultation and discover how we can safeguard

@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from 'lucide-react';
+import { addDoc , collection, db, serverTimestamp} from '@/lib/firebase';
 import Footer from '../components/footer';
 import Header from '../components/header';
 
@@ -25,10 +26,36 @@ const ContactPage = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e) => {
+   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+
+    // ✅ Upload form data to Firestore
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here - would integrate with backend
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+
+    try {
+      await addDoc(collection(db, 'CustomerMessages'), {
+        ...formData,
+        createdAt: serverTimestamp(),
+      });
+      setSubmitSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        propertyType: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -162,7 +189,7 @@ const ContactPage = () => {
                       />
                     </div>
 
-                    <Button type="submit" variant="hero" size="lg" className="w-full">
+                    {/* <Button type="submit" variant="hero" size="lg" className="w-full">
                       <Send className="h-5 w-5 mr-2" />
                       Send Message & Schedule Assessment
                     </Button>
@@ -170,7 +197,18 @@ const ContactPage = () => {
                     <p className="text-xs text-muted-foreground text-center">
                       By submitting this form, you agree to our privacy policy and consent to being contacted 
                       by our team regarding your security needs.
-                    </p>
+                    </p> */}
+
+                     <Button type="submit" variant="hero" size="lg" className="w-full border hover:border-teal-500" disabled={isSubmitting}>
+                        <Send className="h-5 w-5 mr-2" />
+                        {isSubmitting ? 'Sending...' : 'Send Message & Schedule Assessment'}
+                      </Button>
+
+                      {submitSuccess && (
+                        <p className="text-sm text-green-500 text-center mt-2">
+                          ✅ Message sent successfully! We'll reach out soon.
+                        </p>
+                      )}
                   </form>
                 </CardContent>
               </Card>

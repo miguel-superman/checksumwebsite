@@ -106,9 +106,15 @@ const HomePage = () => {
 
   const slides = [
     "/checksum-logo.png",
-    "/card.png",
-    "/install.jpg",
+    "/cardfront.jpeg",
+    "/cardback.jpeg",
     "/monitor.jpg",
+    "/dashcam.jpeg",
+    "/smartlock.jpeg",
+    "/smart1.jpeg",
+    "/install1.jpeg",
+
+    
   ];
 
   return (
@@ -118,38 +124,13 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-background/80" />
         <div className="container-section relative my-4 mx-8">
           <ImageCarousel slides={slides} />
-          <Carousel>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="min-w-full px-4 md:min-w-[33.3333%] my-8">
-                <Card className="card-gradient h-full">
-                  <CardContent className="p-6 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 text-accent fill-current" />
-                        ))}
-                      </div>
-                      <p className="text-muted-foreground mb-4 italic">
-                        "{testimonial.content}"
-                      </p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-          <div className="max-w-4xl mx-auto text-center space-y-8 my-8">
-            <h1 className="text-hero text-foreground">
+        
+          <div className="max-w-4xl mx-auto text-center space-y-8 my-10">
+            <h1 className="text-hero text-foreground text-2xl mb-4">
               Smart Security Solutions for 
               <span className="text-accent"> Jamaica</span>
             </h1>
-            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-body-large text-gray-900 max-w-2xl mx-auto">
               Protecting homes and businesses with cutting-edge CCTV, access control, 
               and alarm systems. Professional installation and 24/7 monitoring services.
             </p>
@@ -166,7 +147,7 @@ const HomePage = () => {
             </div>
             
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center items-center gap-8 pt-12 opacity-80">
+            {/* <div className="flex flex-wrap justify-center items-center gap-8 pt-12 opacity-80">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle className="h-5 w-5 text-success" />
                 Licensed & Insured
@@ -183,7 +164,7 @@ const HomePage = () => {
                 <CheckCircle className="h-5 w-5 text-success" />
                 Free Estimates
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -193,7 +174,7 @@ const HomePage = () => {
         <div className="container-section mb-8">
           <div className="text-center mb-16">
             <h2 className="text-heading font-extrabold text-gray-500 text-2xl mb-4">Our Security Services</h2>
-            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-body-large text-gray-800 max-w-2xl mx-auto">
               Comprehensive security solutions tailored to protect what matters most to you
             </p>
           </div>
@@ -208,10 +189,6 @@ const HomePage = () => {
       {/* Industries Section */}
       <section className="section-padding p-4 pb-20 pt-20">
         <div className="container-section">
-
-          <div className="h-64 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-          </div>
           <div className="text-center mb-16">
             <h2 className="text-heading font-extrabold text-gray-700 text-2xl mb-4">Industries We Serve</h2>
             <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
@@ -230,9 +207,6 @@ const HomePage = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="h-96 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           </div>
         </div>
       </section>
