@@ -28,7 +28,8 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             {/* <Shield className="h-8 w-8 text-accent" /> */}
-            <Image src='/checksum-logo.png' alt='checksum logo' width={80} height={80} />
+            {/* <Image src='/checksum-logo.png' alt='checksum logo' width={80} height={80} /> */}
+            <img src='/checksum-logo.png'  alt='checksum logo' className="w-20 h-20" />
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-none">Checksum</span>
               <span className="text-xs text-muted-foreground leading-none">Smart Security Solutions Ltd.</span>
