@@ -206,7 +206,7 @@ const ContactPage = () => {
 
                       {submitSuccess && (
                         <p className="text-sm text-green-500 text-center mt-2">
-                          ✅ Message sent successfully! We'll reach out soon.
+                          ✅ Message sent successfully! We&apos;ll reach out soon.
                         </p>
                       )}
                   </form>
@@ -313,7 +313,7 @@ const ContactPage = () => {
                     <p>• And surrounding areas</p>
                   </div>
                   <p className="text-xs text-muted-foreground mt-4">
-                    Don't see your area? Contact us - we may still be able to serve you.
+                    Don&apos;t see your area? Contact us - we may still be able to serve you.
                   </p>
                 </CardContent>
               </Card>

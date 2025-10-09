@@ -157,7 +157,7 @@ const ServicesPage = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-heading mt-8 mb-4 text-7xl">Why Choose Checksum?</h2>
                         <p className="text-body-large text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Experience the difference with Jamaica's leading security solutions provider
+                        Experience the difference with Jamaica&apos;s leading security solutions provider
                         </p>
                     </div>
 
