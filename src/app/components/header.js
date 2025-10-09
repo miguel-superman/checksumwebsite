@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Shield, Phone, MessageCircle ,Package, LetterTextIcon } from 'lucide-react';
 
@@ -27,7 +28,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             {/* <Shield className="h-8 w-8 text-accent" /> */}
-            <img src='checksum-logo.png' alt='checksum logo' className='h-20 w-20' />
+            <Image src='/checksum-logo.png' alt='checksum logo' width={80} height={80} />
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-none">Checksum</span>
               <span className="text-xs text-muted-foreground leading-none">Smart Security Solutions Ltd.</span>

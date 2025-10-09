@@ -1,3 +1,5 @@
+'use client'
+
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -15,7 +17,8 @@ const NotFound = () => {
       <div className="container-section">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           <div className="space-y-4">
-            <Shield className="h-24 w-24 text-accent mx-auto" />
+            {/* <Shield className="h-24 w-24 text-accent mx-auto" /> */}
+            <Image src='checksum-logo.png' alt='checksum logo' className='h-20 w-20' />
             <h1 className="text-6xl font-black text-foreground">404</h1>
             <h2 className="text-2xl font-semibold text-foreground">Page Not Found</h2>
             <p className="text-muted-foreground max-w-md mx-auto">
@@ -42,8 +45,8 @@ const NotFound = () => {
           <div className="pt-8 text-sm text-muted-foreground">
             <p>
               Need help? Call us at{" "}
-              <a href="tel:+1876-555-0123" className="text-accent hover:underline">
-                +1 (876) 555-0123
+              <a href="tel:+1876-859-2783" className="text-accent hover:underline">
+                +1 (876) 859-2783
               </a>
             </p>
           </div>

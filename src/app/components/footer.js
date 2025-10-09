@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Shield, Phone, Mail, MapPin, MessageCircle, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -15,7 +16,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <img src='checksum-logo.png' alt='checksum logo' className='h-20 w-20' />
+              <Image src='/checksum-logo.png' alt='checksum logo' width={180} height={180} />
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-none">Checksum</span>
                 <span className="text-xs text-muted-foreground leading-none">

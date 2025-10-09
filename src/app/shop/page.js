@@ -1787,7 +1787,7 @@ const ShopPage = () => {
                 <SheetHeader>
                   <div className='flex flex-row justify-items-center items-center'>
 
-                    <img src='checksum-logo.png' alt='checksum logo' className='h-20 w-20' />
+                    <Image src='checksum-logo.png' alt='checksum logo' className='h-20 w-20' />
                     <SheetTitle className="text-lg font-semibold">Your Cart</SheetTitle>
 
                   </div>
