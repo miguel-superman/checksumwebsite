@@ -49,15 +49,15 @@ const ContactPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="cta" size="xl" asChild>
-                <a href="https://wa.me/18765550123" className="flex items-center gap-2">
+                <a href="https://wa.me/18768592783" className="flex items-center gap-2">
                   <MessageCircle className="h-5 w-5" />
                   WhatsApp Now
                 </a>
               </Button>
               <Button variant="minimal" size="xl" asChild>
-                <a href="tel:+1876-555-0123" className="flex items-center gap-2">
+                <a href="tel:+1876-859-2783" className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
-                  Call (876) 555-0123
+                  Call (876) 859-2783
                 </a>
               </Button>
             </div>
@@ -111,7 +111,7 @@ const ContactPage = () => {
                         <Input
                           id="phone"
                           type="tel"
-                          placeholder="+1 (876) 555-0123"
+                          placeholder="+1 (876) 859-2783"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
                           required
@@ -222,7 +222,7 @@ const ContactPage = () => {
                   </div>
 
                   <Button variant="cta" className="w-full" asChild>
-                    <a href="https://wa.me/18765550123" className="flex items-center gap-2 justify-center">
+                    <a href="https://wa.me/18768592783" className="flex items-center gap-2 justify-center">
                       <MessageCircle className="h-4 w-4" />
                       WhatsApp Us Now
                     </a>
@@ -285,18 +285,29 @@ const ContactPage = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-8">
+      {/* <section className="py-8">
         <div className="container-section">
           <Card className="overflow-hidden">
             <div className="h-96 bg-muted flex items-center justify-center">
               <div className="text-center space-y-2">
                 <MapPin className="h-12 w-12 text-accent mx-auto" />
-                <p className="font-medium">Interactive Map</p>
-                <p className="text-sm text-muted-foreground">Google Maps integration would be embedded here</p>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970743.4484940184!2d-77.2761154!3d18.11933375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xcc245fc420e4fdf%3A0x8ceb704a424bf841!2sChecksum%20Smart%20Security%20Solutions%20Ltd!5e0!3m2!1sen!2sjm!4v1759969922121!5m2!1sen!2sjm" 
+
+                className="w-full h-[400px] rounded-md border-0 shadow-md"
+                allowFullScreen=""
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade">
+
+                </iframe>
               </div>
             </div>
           </Card>
         </div>
+      </section> */}
+
+      <section className='py-8'>
+        
       </section>
     </main>
     <Footer />
