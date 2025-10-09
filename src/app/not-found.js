@@ -35,12 +35,10 @@ export default function NotFound() {
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                    <Image
+                    <img
                     src="/checksum-logo.png"
                     alt="Checksum Logo"
-                    width={290}
-                    height={290}
-                    className="mx-auto rounded-full shadow-sm"
+                    className="mx-auto rounded-full w-80 h-80 shadow-sm"
                     priority
                     />
                 </motion.div>

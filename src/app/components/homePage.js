@@ -229,7 +229,7 @@ const HomePage = () => {
                       <Star key={i} className="h-5 w-5 text-accent fill-current" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">&apos;{testimonial.content}&apos;</p>
+                  <p className="text-muted-foreground mb-4 italic">&quot;{testimonial.content}&quot;</p>
                   <div>
                     <p className="font-semibold text-foreground">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>

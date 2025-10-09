@@ -31,7 +31,7 @@ const ImageCarousel = ({ slides }) => {
         <div className="flex">
           {slides.map((src, index) => (
             <div key={index} className="relative min-w-full h-[400px] md:h-screen">
-              <Image
+              <img
                 src={src}
                 alt={`Slide ${index}`}
                 fill

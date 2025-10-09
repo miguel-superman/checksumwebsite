@@ -16,7 +16,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src='/checksum-logo.png' alt='checksum logo' width={180} height={180} />
+              {/* <Image src='/checksum-logo.png' alt='checksum logo' width={180} height={180} /> */}
+              <img src='/checksum-logo.png'  alt='checksum logo' className="w-40 h-40" />
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-none">Checksum</span>
                 <span className="text-xs text-muted-foreground leading-none">
