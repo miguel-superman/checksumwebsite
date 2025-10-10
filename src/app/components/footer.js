@@ -133,16 +133,16 @@ const Footer = () => {
               <Link href="/privacy-policy-2" className="hover:text-accent transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-accent transition-colors">
+              <Link href="/terms-of-service" className="hover:text-accent transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/returns" className="hover:text-accent transition-colors">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Returns
               </Link>
-              <Link href="/warranty" className="hover:text-accent transition-colors">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Warranty
               </Link>
-              <Link href="/shipping" className="hover:text-accent transition-colors">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Shipping
               </Link>
             </div>
