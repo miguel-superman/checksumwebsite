@@ -35,7 +35,7 @@ const ImageCarousel = ({ slides }) => {
                 src={src}
                 alt={`Slide ${index}`}
                 fill
-                className="object-fill md:object-cover rounded-2xl"
+                className="object-fill md:object-contain h-full w-full rounded-2xl"
                 priority={index === 0}
               />
             </div>
