@@ -156,6 +156,7 @@ const ContactPage = () => {
                             <SelectItem value="alarm-monitoring">Alarm Monitoring</SelectItem>
                             <SelectItem value="networking">Network Solutions</SelectItem>
                             <SelectItem value="complete-package">Complete Security Package</SelectItem>
+                            <SelectItem value="account-deletion">Account deletion</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>

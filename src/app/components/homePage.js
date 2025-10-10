@@ -49,18 +49,18 @@ const HomePage = () => {
       ],
       href: '/services/access-control'
     },
-    {
-      icon: Bell,
-      title: 'Alarm Monitoring',
-      description: 'Professional 24/7 monitoring with instant emergency response.',
-      features: [
-        '24/7 monitoring center',
-        'Instant alerts',
-        'Emergency response',
-        'Mobile notifications'
-      ],
-      href: '/services/alarm-monitoring'
-    },
+    // {
+    //   icon: Bell,
+    //   title: 'Alarm Monitoring',
+    //   description: 'Professional 24/7 monitoring with instant emergency response.',
+    //   features: [
+    //     '24/7 monitoring center',
+    //     'Instant alerts',
+    //     'Emergency response',
+    //     'Mobile notifications'
+    //   ],
+    //   href: '/services/alarm-monitoring'
+    // },
     {
       icon: Wifi,
       title: 'Networking',
@@ -110,9 +110,16 @@ const HomePage = () => {
     "/cardback.jpeg",
     "/monitor.jpg",
     "/dashcam.jpeg",
-    "/smartlock.jpeg",
-    "/smart1.jpeg",
-    "/install1.jpeg",
+    // "/smartlock.jpeg",
+    // "/smart1.jpeg",
+    // "/install1.jpeg",
+    "/install2.jpg",
+    "/cam1.jpg",
+    "/cam2.jpg",
+    "/dashinstall.jpg",
+    "/dashwork.jpg",
+    "/smartlock1.jpg",
+    "/smartlock2.jpg",
 
     
   ];
@@ -128,20 +135,20 @@ const HomePage = () => {
           <div className="max-w-4xl mx-auto text-center space-y-8 my-10">
             <h1 className="text-hero text-foreground text-2xl mb-4">
               Smart Security Solutions for 
-              <span className="text-accent"> Jamaica</span>
+              <span className="text-black"> Jamaica</span>
             </h1>
             <p className="text-body-large text-gray-900 max-w-2xl mx-auto">
               Protecting homes and businesses with cutting-edge CCTV, access control, 
-              and alarm systems. Professional installation and 24/7 monitoring services.
+              and alarm systems. Professional installation services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="hero" size="xl">
-                Book Free Site Survey
+                Book Your Site Survey
               </Button>
               <Button variant="minimal" size="xl" asChild>
-                <a href="tel:+1876-555-0123" className="flex items-center gap-2">
+                <a href="tel:+1876-859-2783" className="flex items-center gap-2">
                   <Phone className="h-5 w-5" />
-                  Call Now: (876) 555-0123
+                  Call Now: (876) 859-2783
                 </a>
               </Button>
             </div>
@@ -178,7 +185,7 @@ const HomePage = () => {
               Comprehensive security solutions tailored to protect what matters most to you
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
@@ -212,7 +219,7 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding bg-card p-4  pb-20 pt-20">
+      {/* <section className="section-padding bg-card p-4  pb-20 pt-20">
         <div className="container-section">
           <div className="text-center mb-16">
             <h2 className="text-heading font-extrabold text-gray-500 text-2xl mb-4">What Our Clients Say</h2>
@@ -239,7 +246,28 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* <section className="section-padding bg-card p-4 pb-20 pt-20">
+        <div className="container-section text-center">
+          <h2 className="text-heading font-extrabold text-gray-500 text-2xl mb-4">What Our Clients Say</h2>
+          <p className="text-body-large text-muted-foreground max-w-2xl mx-auto mb-8">
+            Trusted by homes and businesses across Jamaica
+          </p>
+
+          <div className="flex justify-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d970743.4484940184!2d-77.2761154!3d18.11933375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xcc245fc420e4fdf%3A0x8ceb704a424bf841!2sChecksum%20Smart%20Security%20Solutions%20Ltd!5e0!3m2!1sen!2sjm!4v1760097293661!5m2!1sen!2sjm"
+              width="100%"
+              height="400"
+              style={{ border: 0, borderRadius: '1rem' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+          </div>
+        </div>
+      </section> */}
+
 
       {/* CTA Section */}
       {/* <section className="section-padding bg-gradient-hero p-4">
