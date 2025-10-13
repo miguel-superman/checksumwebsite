@@ -207,7 +207,7 @@ const HomePage = () => {
               <Card key={index} className="card-gradient hover:shadow-glow transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <div className="mx-auto mb-4 w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                    <industry.icon className="h-7 w-7 text-accent" />
+                    <industry.icon className="h-7 w-7 text-teal-400" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{industry.title}</h3>
                   <p className="text-sm text-muted-foreground">{industry.description}</p>
