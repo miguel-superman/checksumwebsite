@@ -32,7 +32,7 @@ const AboutPage = () => {
           <div className="container-section grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
             <Card className="card-gradient text-center">
               <CardHeader>
-                <Shield className="w-10 h-10 text-accent mx-auto" />
+                <Shield className="w-10 h-10 text-teal-500 mx-auto" />
                 <CardTitle className={"text-2xl"}>Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
@@ -44,7 +44,7 @@ const AboutPage = () => {
 
             <Card className="card-gradient text-center">
               <CardHeader>
-                <Target className="w-10 h-10 text-accent mx-auto" />
+                <Target className="w-10 h-10 text-teal-500 mx-auto" />
                 <CardTitle className={"text-2xl"}>Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
@@ -56,7 +56,7 @@ const AboutPage = () => {
 
             <Card className="card-gradient text-center">
               <CardHeader>
-                <Star className="w-10 h-10 text-accent mx-auto" />
+                <Star className="w-10 h-10 text-teal-500 mx-auto" />
                 <CardTitle className={"text-2xl"}>Our Values</CardTitle>
               </CardHeader>
               <CardContent>
@@ -77,7 +77,7 @@ const AboutPage = () => {
             <Card className="card-gradient">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Briefcase className="h-6 w-6 text-accent" />
+                  <Briefcase className="h-6 w-6 text-teal-500" />
                   Our Journey
                 </CardTitle>
               </CardHeader>
@@ -121,7 +121,7 @@ const AboutPage = () => {
                   Who <span className="text-accent">We Are</span>
                 </h1>
 
-                <p className="text-white font-bold ext-lg max-w-2xl mx-auto">
+                <p className="text-white font-bold text-lg md:text-xl max-w-2xl mx-auto">
                     Established in 2021, Checksum Smart Security Solutions Limited (CS³) was founded by a group of Information Technology (IT) specialists, unified by a vision, mutual desires and abilities, to address growing technological needs for IT products and services in the Caribbean and, by extension, the world. 
 
                     Checksum’s initial focus mainly consisted of Closed-circuit Television (CCTV) surveillance and motor vehicle camera system products and services. As Checksum continues to develop, its focus has expanded to include Information Communication and Technology (ICT) infrastructure consultation, installation and support, cloud infrastructure implementation and support, as well as IT training and smart technological solutions.
