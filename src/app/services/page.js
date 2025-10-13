@@ -18,7 +18,7 @@ const ServicesPage = () => {
         'Mobile app with live streaming',
         'Cloud storage with 30-day retention',
         'Professional installation & setup',
-        '24/7 technical support'
+        // '24/7 technical support'
       ],
       href: '/services/cctv',
       popular: true
@@ -37,34 +37,34 @@ const ServicesPage = () => {
       ],
       href: '/services/access-control'
     },
-    {
-      icon: Bell,
-      title: 'Alarm Monitoring',
-      description: 'Professional 24/7 monitoring services with instant emergency response and real-time notifications.',
-      features: [
-        '24/7 professional monitoring center',
-        'Instant emergency response dispatch',
-        'Mobile push notifications',
-        'SMS & email alerts',
-        'Police & fire department coordination',
-        'Monthly monitoring reports'
-      ],
-      href: '/services/alarm-monitoring'
-    },
-    {
-      icon: Wifi,
-      title: 'Network Solutions',
-      description: 'Reliable network infrastructure installation and management for seamless security system operations.',
-      features: [
-        'Fiber optic network installation',
-        'Wireless network setup',
-        'Network security configuration',
-        'Bandwidth optimization',
-        'Remote network monitoring',
-        'Technical support & maintenance'
-      ],
-      href: '/services/networking'
-    }
+    // {
+    //   icon: Bell,
+    //   title: 'Alarm Monitoring',
+    //   description: 'Professional 24/7 monitoring services with instant emergency response and real-time notifications.',
+    //   features: [
+    //     '24/7 professional monitoring center',
+    //     'Instant emergency response dispatch',
+    //     'Mobile push notifications',
+    //     'SMS & email alerts',
+    //     'Police & fire department coordination',
+    //     'Monthly monitoring reports'
+    //   ],
+    //   href: '/services/alarm-monitoring'
+    // },
+    // {
+    //   icon: Wifi,
+    //   title: 'Network Solutions',
+    //   description: 'Reliable network infrastructure installation and management for seamless security system operations.',
+    //   features: [
+    //     'Fiber optic network installation',
+    //     'Wireless network setup',
+    //     'Network security configuration',
+    //     'Bandwidth optimization',
+    //     'Remote network monitoring',
+    //     'Technical support & maintenance'
+    //   ],
+    //   href: '   '
+    // }
   ];
 
   return (
@@ -81,7 +81,7 @@ const ServicesPage = () => {
                         </h1>
                         <p className="text-body-large text-xl text-gray-700 max-w-2xl mx-auto">
                         Comprehensive security solutions designed to protect your property with the latest technology 
-                        and professional monitoring services available 24/7.
+                        and professional monitoring services.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Button variant="hero" size="xl">
@@ -138,7 +138,7 @@ const ServicesPage = () => {
                             </div>
                             <div className="flex gap-3">
                                 <Button variant="security" className="flex-1" asChild>
-                                <a href={service.href}>Learn More</a>
+                                {/* <a href={service.href}>Learn More</a> */}
                                 </Button>
                                 <Button variant="cta">
                                 Get Quote
@@ -147,6 +147,56 @@ const ServicesPage = () => {
                             </CardContent>
                         </Card>
                         ))}
+                     
+                    </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 mt-10">
+                        <Card key={"network"} className="card-gradient hover:shadow-glow transition-all duration-300 relative">
+                        
+                            <CardHeader className="pb-4">
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                                <Wifi className="h-6 w-6 text-teal-500" />
+                                </div>
+                                <div>
+                                <CardTitle className="text-xl">Network Solutions</CardTitle>
+                                </div>
+                            </div>
+                            <CardDescription className="text-base">Reliable network infrastructure installation and management for seamless security system operations.</CardDescription>
+                            </CardHeader>
+                            <CardContent className="space-y-6">
+                            <div className="space-y-3">
+                                <div key={1} className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-muted-foreground">Wireless network setup</span>
+                                </div>
+                                <div key={2} className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-muted-foreground">Network security configuration</span>
+                                </div>
+                                <div key={3} className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-muted-foreground">Bandwidth optimization</span>
+                                </div>
+                                <div key={4} className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-muted-foreground">Remote network monitoring</span>
+                                </div>
+                                <div key={5} className="flex items-start gap-3">
+                                    <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-muted-foreground">Technical support & maintenance</span>
+                                </div>
+
+                            </div>
+                            <div className="flex gap-3">
+                                <Button variant="security" className="flex-1" asChild>
+                                {/* <a href={service.href}>Learn More</a> */}
+                                </Button>
+                                <Button variant="cta">
+                                Get Quote
+                                </Button>
+                            </div>
+                            </CardContent>
+                        </Card>
                     </div>
                     </div>
                 </section>
@@ -161,7 +211,7 @@ const ServicesPage = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <Card className="card-gradient text-center">
                         <CardContent className="p-8">
                             <div className="mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
@@ -177,16 +227,16 @@ const ServicesPage = () => {
                         <Card className="card-gradient text-center">
                         <CardContent className="p-8">
                             <div className="mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
-                            <span className="text-2xl font-bold text-teal-500">10+</span>
+                            <span className="text-2xl font-bold text-teal-500">4+</span>
                             </div>
                             <h3 className="font-semibold text-lg mb-3">Years of Experience</h3>
                             <p className="text-sm text-muted-foreground">
-                            Over a decade protecting Jamaican homes and businesses with proven security solutions.
+                             Protecting Jamaican homes and businesses with proven security solutions.
                             </p>
                         </CardContent>
                         </Card>
 
-                        <Card className="card-gradient text-center">
+                        {/* <Card className="card-gradient text-center">
                         <CardContent className="p-8">
                             <div className="mx-auto mb-4 w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
                             <span className="text-lg font-bold text-teal-500">24/7</span>
@@ -196,7 +246,7 @@ const ServicesPage = () => {
                             Professional monitoring and technical support available 24 hours a day, 7 days a week.
                             </p>
                         </CardContent>
-                        </Card>
+                        </Card> */}
                     </div>
                     </div>
                 </section>
