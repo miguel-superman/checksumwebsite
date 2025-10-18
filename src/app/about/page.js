@@ -131,10 +131,13 @@ const AboutPage = () => {
                 
               </div>
               <div>
-                <Image src={"/checksum-logo.png"}
+                {/* <Image src={"/checksum-logo.png"}
                 width={1040}
                 height={1050}
                   alt="checksum logo"
+                /> */}
+                <img src='/checksum-logo.png'  alt='checksum logo' className="w-120 h-140" 
+                
                 />
               </div>
 
