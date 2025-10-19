@@ -1,59 +1,61 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const cors = require("cors")({ origin: true });
-const {SessionsClient} = require("@google-cloud/dialogflow");
+const { onDocumentCreated } = require("firebase-functions/v2/firestore");
+const nodemailer = require("nodemailer");
+require("dotenv").config();
 
-admin.initializeApp();
+// Example 1: Create a user
+// exports.createUser = functions.https.onCall(async (data, context) => {
+//   const user = await admin.auth().createUser({
+//     email: data.email,
+//     password: data.password,
+//   });
+//   return { uid: user.uid };
+// });
 
-// TODO: set your Dialogflow agent GCP project id
-const projectId = "YOUR_DIALOGFLOW_PROJECT_ID";
-const sessionClient = new SessionsClient();
+// Example 2: Send an email
+// Trigger when a new document is added to Firestore collection "CustomerMessages"
+exports.sendContactMessageEmail = onDocumentCreated("CustomerMessages/{messageId}", async (event) => {
+  const customerData = event.data.data();
 
-exports.dialogflowGateway = functions.https.onRequest(async (req, res) => {
-  cors(req, res, async () => {
-    if (req.method !== "POST") {
-      return res.status(405).send({ error: "Method not allowed" });
-    }
-
-    try {
-      const { query, sessionId = "anonymous", languageCode = "en-US", userId } = req.body || {};
-
-      if (!query || typeof query !== "string") {
-        return res.status(400).send({ error: "Missing 'query' in body" });
-      }
-
-      const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
-
-      const dfReq = {
-        session: sessionPath,
-        queryInput: {
-          text: { text: query, languageCode }
-        }
-      };
-
-      const [dfRes] = await sessionClient.detectIntent(dfReq);
-      const result = dfRes.queryResult || {};
-      const reply = result.fulfillmentText || "(no response)";
-
-      // Optional: log chat to Firestore
-      if (userId) {
-        await admin.firestore().collection("chats").add({
-          userId,
-          sessionId,
-          query,
-          reply,
-          timestamp: admin.firestore.FieldValue.serverTimestamp()
-        });
-      }
-
-      return res.status(200).send({
-        reply,
-        intent: result.intent?.displayName || null,
-        confidence: result.intentDetectionConfidence ?? null,
-      });
-    } catch (e) {
-      console.error(e);
-      return res.status(500).send({ error: e.message || "Internal error" });
-    }
+  // Create the email transporter using your Gmail credentials
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.NEXT_PUBLIC_GMAIL_APP_USER,
+      pass: process.env.NEXT_PUBLIC_GMAIL_APP_PASSWORD,
+    },
   });
+
+  // Build the email content
+  const mailOptions = {
+    from: process.env.NEXT_PUBLIC_GMAIL_APP_USER,
+    to: "sales@cs3.ltd", // main recipient
+    cc: "candscubed@gmail.com", // optional CC
+    subject: "📩 New Message from Contact Page",
+    html: `
+      <h2>New Customer Inquiry</h2>
+      <p><strong>Name:</strong> ${customerData.name}</p>
+      <p><strong>Email:</strong> ${customerData.email}</p>
+      <p><strong>Phone:</strong> ${customerData.phone}</p>
+      <p><strong>Service Interested In:</strong> ${customerData.service}</p>
+      <p><strong>Property Type:</strong> ${customerData.propertyType}</p>
+      <p><strong>Message:</strong><br/>${customerData.message}</p>
+      <hr/>
+      <p><em>This message was submitted via the Contact Us form on the CS3 Smart Security website.</em></p>
+    `,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("✅ Contact form email sent successfully!");
+  } catch (error) {
+    console.error("❌ Error sending contact form email:", error);
+  }
 });
+
+
+// Example 3: Get products
+// exports.getProducts = functions.https.onRequest(async (req, res) => {
+//   const snapshot = await admin.firestore().collection("products").get();
+//   const products = snapshot.docs.map(doc => doc.data());
+//   res.json(products);
+// });
