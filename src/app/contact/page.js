@@ -17,6 +17,7 @@ const ContactPage = () => {
     name: '',
     email: '',
     phone: '',
+    address: '',
     service: '',
     propertyType: '',
     message: ''
@@ -61,7 +62,7 @@ const ContactPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-teal-500 via-black to-white">
+      <main className="min-h-screen bg-gradient-to-b from-teal-500 via-gray to-white">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-hero">
         <div className="container-section p-4">
@@ -70,7 +71,7 @@ const ContactPage = () => {
               Contact Our Security 
               <span className="text-accent"> Experts</span>
             </h1>
-            <p className="text-body-large text-gray-700 text-lg max-w-2xl mx-auto">
+            <p className="text-body-large text-gray-900 text-lg max-w-2xl mx-auto">
               Ready to secure your property? Get in touch with our team for a free consultation 
               and custom security solution designed for your needs.
             </p>
@@ -144,7 +145,26 @@ const ContactPage = () => {
                           required
                         />
                       </div>
+
                       <div className="space-y-2">
+                        <Label htmlFor="address">Site Survey Address</Label>
+                        <Input
+                          id="address"
+                          type="text"
+                          placeholder="Your Site Address"
+                          value={formData.address}
+                          onChange={(e) => handleInputChange('phone', e.target.value)}
+                          required
+                        />
+                      </div>
+
+                      
+
+                      
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2 w-full">
                         <Label htmlFor="service">Service Interested In</Label>
                         <Select value={formData.service} onValueChange={(value) => handleInputChange('service', value)}>
                           <SelectTrigger>
@@ -160,9 +180,7 @@ const ContactPage = () => {
                           </SelectContent>
                         </Select>
                       </div>
-                    </div>
-
-                    <div className="space-y-2">
+                      <div className="space-y-2 w-full">
                       <Label htmlFor="propertyType">Property Type</Label>
                       <Select value={formData.propertyType} onValueChange={(value) => handleInputChange('propertyType', value)}>
                         <SelectTrigger>
@@ -178,6 +196,11 @@ const ContactPage = () => {
                         </SelectContent>
                       </Select>
                     </div>
+
+                        
+                      </div>
+
+                    
 
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>

@@ -70,7 +70,7 @@ const ServicesPage = () => {
   return (
     <>
         <Header />
-            <main className="min-h-screen bg-gray-300">
+            <main className="min-h-screen from-teal-500 via-gray to-white">
                 {/* Hero Section */}
                 <section className="section-padding bg-gradient-hero p-4">
                     <div className="container-section">
@@ -83,14 +83,6 @@ const ServicesPage = () => {
                         Comprehensive security solutions designed to protect your property with the latest technology 
                         and professional monitoring services.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <Button variant="hero" size="xl">
-                            Cheap Security Assessment
-                        </Button>
-                        <Button variant="minimal" size="xl">
-                            View All Services
-                        </Button>
-                        </div>
                     </div>
                     </div>
                 </section>
