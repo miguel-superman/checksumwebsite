@@ -16,7 +16,7 @@ const Header = () => {
     { name: 'Services', path: '/services', hasDropdown: true },
     // { name: 'Industries', path: '/industries', hasDropdown: true },
     { name: 'Shop', path: '/shop' },
-    { name: 'Customer Reviews', path: '/case-studies' },
+    { name: 'Customer Reviews', path: 'https://www.google.com/search?q=checksum+smart+security+solutions+ltd&oq=checksum&gs_lcrp=EgZjaHJvbWUqBggCECMYJzIGCAAQRRg8Mg4IARBFGCcYOxiABBiKBTIGCAIQIxgnMgYIAxBFGDwyBggEEEUYQTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDUzMjVqMGo3qAIIsAIB8QW9shyLyIsQfw&sourceid=chrome&ie=UTF-8#' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
