@@ -15,8 +15,8 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services', hasDropdown: true },
     // { name: 'Industries', path: '/industries', hasDropdown: true },
-    // { name: 'Shop', path: '/shop' },
-    // { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Shop', path: '/shop' },
+    { name: 'Customer Reviews', path: '/case-studies' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -107,10 +107,10 @@ const Header = () => {
                   </a>
                 </Button>
                 <Button variant="cta" size="sm" asChild>
-                  <a href="https://wa.me/18765550123" className="flex items-center gap-2 justify-center">
+                  <Link href="https://wa.me/18768592783" className="flex items-center gap-2">
                     <MessageCircle className="h-4 w-4" />
                     WhatsApp
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="hero" size="sm">
                   Free Quote

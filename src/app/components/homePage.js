@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 
 import ImageCarousel from './ImageCarousel';
+import Link from 'next/link';
 
 const HomePage = () => {
   const services = [
@@ -35,7 +36,7 @@ const HomePage = () => {
         'Motion detection alerts',
         'Cloud & local storage'
       ],
-      href: '/services/cctv'
+      href: '/services'
     },
     {
       icon: Lock,
@@ -47,7 +48,7 @@ const HomePage = () => {
         'Remote access control',
         'Audit trail logging'
       ],
-      href: '/services/access-control'
+      href: '/services'
     },
     // {
     //   icon: Bell,
@@ -71,14 +72,14 @@ const HomePage = () => {
         'Network security',
         'Technical support'
       ],
-      href: '/services/networking'
+      href: '/services'
     }
   ];
 
   const industries = [
     { icon: Home, title: 'Residential', description: 'Home security solutions' },
     { icon: Building, title: 'Commercial', description: 'Office & retail security' },
-    { icon: Factory, title: 'Industrial', description: 'Manufacturing security' },
+    // { icon: Factory, title: 'Industrial', description: 'Manufacturing security' },
     { icon: Store, title: 'Retail', description: 'Store protection systems' }
   ];
 
@@ -143,7 +144,13 @@ const HomePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="hero" size="xl">
-                Book Your Site Survey
+                <Link
+                  href={"/contact"}
+                >
+                  Book Your Site Survey
+                
+                </Link>
+                
               </Button>
               <Button variant="minimal" size="xl" asChild>
                 <a href="tel:+1876-859-2783" className="flex items-center gap-2">
@@ -202,7 +209,7 @@ const HomePage = () => {
               Specialized security solutions for different sectors across Jamaica
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry, index) => (
               <Card key={index} className="card-gradient hover:shadow-glow transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-6 text-center">

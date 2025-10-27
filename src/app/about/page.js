@@ -142,16 +142,16 @@ const AboutPage = () => {
               
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8">
               {[ 
-                { name: 'John Smith', role: 'CEO & Founder' },
-                { name: 'Sarah Johnson', role: 'Operations Manager' },
-                { name: 'Michael Brown', role: 'Lead Technician' },
+                { name: 'Peter Ferguson', role: 'Director & Chairman' },
+                { name: 'Daniel Nelson', role: 'Director & Operations Manager' },
+                // { name: 'Michael Brown', role: 'Lead Technician' },
               ].map((member, i) => (
                 <Card key={i} className="card-gradient text-center">
                   <CardContent className="pt-6 space-y-3">
                     <div className="w-24 h-24 rounded-full bg-accent/10 mx-auto flex items-center justify-center">
-                      <Users className="w-10 h-10 text-accent" />
+                      <Users className="w-10 h-10 text-teal-500" />
                     </div>
                     <p className="font-medium">{member.name}</p>
                     <p className="text-sm text-muted-foreground">{member.role}</p>
