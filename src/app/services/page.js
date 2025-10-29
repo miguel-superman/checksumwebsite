@@ -70,7 +70,7 @@ const ServicesPage = () => {
   return (
     <>
         <Header />
-            <main className="min-h-screen from-teal-500 via-gray to-white">
+            <main className="min-h-screen bg-gradient-to-b from-sky-500 to-gray-800">
                 {/* Hero Section */}
                 <section className="section-padding bg-gradient-hero p-4">
                     <div className="container-section">
@@ -79,7 +79,7 @@ const ServicesPage = () => {
                         Professional Security 
                         <span className="text-accent"> Services</span>
                         </h1>
-                        <p className="text-body-large text-xl text-gray-700 max-w-2xl mx-auto">
+                        <p className="text-body-large text-xl text-gray-900 max-w-2xl mx-auto">
                         Comprehensive security solutions designed to protect your property with the latest technology 
                         and professional monitoring services.
                         </p>
@@ -92,7 +92,7 @@ const ServicesPage = () => {
                     <div className="container-section">
                     <div className="text-center mb-16">
                         <h2 className="text-heading mb-4 text-2xl">Our Security Services</h2>
-                        <p className="text-body-large text-gray-700 text-lg max-w-2xl mx-auto">
+                        <p className="text-body-large text-gray-900 text-lg max-w-2xl mx-auto">
                         From residential homes to commercial buildings, we provide tailored security solutions 
                         that meet your specific needs and budget.
                         </p>
@@ -247,12 +247,12 @@ const ServicesPage = () => {
                 <section className="section-padding bg-gradient-hero py-10">
                     <div className="container-section text-center">
                         <div className="max-w-3xl mx-auto space-y-6">
-                            <h2 className="text-heading mt-8 mb-4 text-4xl text-foreground">Ready to Get Started?</h2>
-                            <p className="text-body-large text-2xl text-muted-foreground">
+                            <h2 className="text-heading mt-8 mb-4 text-4xl text-white">Ready to Get Started?</h2>
+                            <p className="text-body-large text-2xl text-gray-200">
                             Contact us today for a free security assessment and custom quote. 
                             Our security experts will design the perfect solution for your property.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
                             <Button variant="hero" size="xl">
                                 Schedule An Assessment
                             </Button>

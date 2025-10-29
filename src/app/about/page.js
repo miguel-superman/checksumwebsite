@@ -12,7 +12,7 @@ const AboutPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-teal-300 via-black to-white">
+      <main className="min-h-screen bg-gradient-to-b from-sky-500 to-gray-800">
         
         {/* Hero Section */}
         <section className="section-padding bg-gradient-hero ">
@@ -114,14 +114,14 @@ const AboutPage = () => {
               Together, we work to deliver the highest standard of safety and reliability.
             </p> */}
 
-            <div className='justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8'>
+            <div className='justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-8'>
               <div>
 
-                <h1 className="text-teal-200 text-6xl md:text-7xl font-bold mb-7 md:mb-32">
+                <h1 className=" text-teal-200 text-6xl md:text-7xl font-bold mb-10 md:mb-22">
                   Who <span className="text-accent">We Are</span>
                 </h1>
 
-                <p className="text-white font-bold text-lg md:text-xl max-w-2xl mx-auto">
+                <p className="text-white font-bold text-lg md:text-xl max-w-2xl mx-auto mb-20">
                     Established in 2021, Checksum Smart Security Solutions Limited (CS³) was founded by a group of Information Technology (IT) specialists, unified by a vision, mutual desires and abilities, to address growing technological needs for IT products and services in the Caribbean and, by extension, the world. 
 
                     Checksum’s initial focus mainly consisted of Closed-circuit Television (CCTV) surveillance and motor vehicle camera system products and services. As Checksum continues to develop, its focus has expanded to include Information Communication and Technology (ICT) infrastructure consultation, installation and support, cloud infrastructure implementation and support, as well as IT training and smart technological solutions.
@@ -130,7 +130,7 @@ const AboutPage = () => {
                 </p>
                 
               </div>
-              <div>
+              <div className='flex justify-center'>
                 {/* <Image src={"/checksum-logo.png"}
                 width={1040}
                 height={1050}
@@ -164,9 +164,9 @@ const AboutPage = () => {
 
         {/* Call to Action */}
         <section className="section-padding ">
-          <div className="container-section text-center space-y-6 text-gray-600 p-6">
-            <h2 className="text-3xl font-bold">Ready to Secure Your Future?</h2>
-            <p className="max-w-xl mx-auto text-lg">
+          <div className="container-section text-center space-y-6 text-gray-300 p-6">
+            <h2 className="text-3xl font-bold text-white">Ready to Secure Your Future?</h2>
+            <p className="max-w-xl mx-auto text-lg text-gray-200">
               Contact our experts today for a free consultation and discover how we can safeguard
               your property with the latest in security technology.
             </p>

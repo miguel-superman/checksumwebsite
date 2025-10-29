@@ -1731,10 +1731,10 @@ const ShopPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-gradient-to-b from-sky-500 to-gray-800">
         
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-r from-slate-900 to-slate-800 text-center">
+        <section className="py-16 bg-gradient-to-b from-sky-500 to-gray-800 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Your Trusted <span className="text-teal-400">Security Store</span>
           </h1>

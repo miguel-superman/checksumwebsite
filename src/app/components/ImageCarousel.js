@@ -30,11 +30,11 @@ const ImageCarousel = ({ slides }) => {
       <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
         <div className="flex">
           {slides.map((src, index) => (
-            <div key={index} className="relative min-w-full h-[400px] md:h-screen">
+            <div key={index} className="relative min-w-full h-[400px] md:h-[550px]">
               <img
                 src={src}
                 alt={`Slide ${index}`}
-                fill
+                fill="true"
                 className="object-fill md:object-contain h-full w-full rounded-2xl"
                 priority={index === 0}
               />

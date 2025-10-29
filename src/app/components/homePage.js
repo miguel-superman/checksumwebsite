@@ -126,7 +126,7 @@ const HomePage = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-teal-500 via-gray to-white">
+    <main className="min-h-screen bg-gradient-to-b from-sky-500 to-gray-800">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0 bg-background/80" />
@@ -204,8 +204,8 @@ const HomePage = () => {
       <section className="section-padding p-4 pb-20 pt-20">
         <div className="container-section">
           <div className="text-center mb-16">
-            <h2 className="text-heading font-extrabold text-gray-700 text-2xl mb-4">Industries We Serve</h2>
-            <p className="text-body-large text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-heading font-extrabold text-white text-2xl mb-4">Industries We Serve</h2>
+            <p className="text-body-large text-gray-200 max-w-2xl mx-auto">
               Specialized security solutions for different sectors across Jamaica
             </p>
           </div>
