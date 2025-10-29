@@ -62,7 +62,7 @@ const ContactPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-teal-500 via-gray to-white">
+      <main className="min-h-screen bg-gradient-to-b from-sky-500  to-gray-800">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-hero">
         <div className="container-section p-4">
@@ -248,11 +248,11 @@ const ContactPage = () => {
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-accent" />
+                      <Phone className="h-5 w-5 text-teal-500" />
                     </div>
                     <div>
                       <p className="font-medium">Call Us</p>
-                      <a href="tel:+1876-859-2783" className="text-sm text-muted-foreground hover:text-accent">
+                      <a href="tel:+1876-859-2783" className="text-sm text-muted-foreground hover:text-gray-400">
                         +1 (876) 859-2783
                       </a>
                     </div>
@@ -260,7 +260,7 @@ const ContactPage = () => {
 
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                      <Mail className="h-5 w-5 text-accent" />
+                      <Mail className="h-5 w-5 text-teal-500" />
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
@@ -272,7 +272,7 @@ const ContactPage = () => {
 
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                      <MapPin className="h-5 w-5 text-accent" />
+                      <MapPin className="h-5 w-5 text-teal-500" />
                     </div>
                     <div>
                       <p className="font-medium">Office</p>
@@ -296,7 +296,7 @@ const ContactPage = () => {
               <Card className="card-gradient">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-accent" />
+                    <Clock className="h-5 w-5 text-teal-500" />
                     Business Hours
                   </CardTitle>
                 </CardHeader>
@@ -315,8 +315,8 @@ const ContactPage = () => {
                   </div>
                   <div className="border-t border-border pt-3 mt-3">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-accent">Emergency Support</span>
-                      <span className="text-sm font-medium text-accent">24/7 Available</span>
+                      {/* <span className="text-sm font-medium text-white">Emergency Support</span> */}
+                      {/* <span className="text-sm font-medium text-white">24/7 Available</span> */}
                     </div>
                   </div>
                 </CardContent>
