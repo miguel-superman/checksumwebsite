@@ -136,7 +136,7 @@ const AboutPage = () => {
                 height={1050}
                   alt="checksum logo"
                 /> */}
-                <img src='/checksum-logo.png'  alt='checksum logo' className="w-120 h-140" />
+                <img src='/checksum-logo.png'  alt='checksum logo' className="md:w-140 md:h-140 w-100 h-100 mb-20 md:mb-0" />
               </div>
 
               
