@@ -15,7 +15,7 @@ const Header = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services', hasDropdown: true },
     // { name: 'Industries', path: '/industries', hasDropdown: true },
-    { name: 'Shop', path: '/shop' },
+    // { name: 'Shop', path: '/shop' },
     { name: 'Customer Reviews', path: 'https://www.google.com/search?q=checksum+smart+security+solutions+ltd&oq=checksum&gs_lcrp=EgZjaHJvbWUqBggCECMYJzIGCAAQRRg8Mg4IARBFGCcYOxiABBiKBTIGCAIQIxgnMgYIAxBFGDwyBggEEEUYQTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDUzMjVqMGo3qAIIsAIB8QW9shyLyIsQfw&sourceid=chrome&ie=UTF-8#' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
@@ -43,7 +43,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-sm font-medium text-foreground hover:text-accent transition-colors"
+                className="text-sm font-medium text-foreground hover:text-sky-500 transition-colors"
               >
                 {item.name}
               </Link>
@@ -93,7 +93,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className="text-foreground hover:text-accent transition-colors py-2"
+                  className="text-foreground hover:text-sky-500 transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

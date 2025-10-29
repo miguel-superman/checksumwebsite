@@ -36,6 +36,7 @@ exports.sendContactMessageEmail = onDocumentCreated("CustomerMessages/{messageId
       <p><strong>Name:</strong> ${customerData.name}</p>
       <p><strong>Email:</strong> ${customerData.email}</p>
       <p><strong>Phone:</strong> ${customerData.phone}</p>
+      <p><strong>Site Survey Address:</strong> ${customerData.address}</p>
       <p><strong>Service Interested In:</strong> ${customerData.service}</p>
       <p><strong>Property Type:</strong> ${customerData.propertyType}</p>
       <p><strong>Message:</strong><br/>${customerData.message}</p>
