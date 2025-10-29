@@ -153,7 +153,7 @@ const ContactPage = () => {
                           type="text"
                           placeholder="Your Site Address"
                           value={formData.address}
-                          onChange={(e) => handleInputChange('phone', e.target.value)}
+                          onChange={(e) => handleInputChange('address', e.target.value)}
                           required
                         />
                       </div>
