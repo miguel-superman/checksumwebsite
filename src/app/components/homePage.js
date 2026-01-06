@@ -38,18 +38,18 @@ const HomePage = () => {
       ],
       href: '/services'
     },
-    {
-      icon: Lock,
-      title: 'Access Control',
-      description: 'Secure entry systems with biometric and card-based authentication.',
-      features: [
-        'Biometric scanners',
-        'Key card systems',
-        'Remote access control',
-        'Audit trail logging'
-      ],
-      href: '/services'
-    },
+    // {
+    //   icon: Lock,
+    //   title: 'Access Control',
+    //   description: 'Secure entry systems with biometric and card-based authentication.',
+    //   features: [
+    //     'Biometric scanners',
+    //     'Key card systems',
+    //     'Remote access control',
+    //     'Audit trail logging'
+    //   ],
+    //   href: '/services'
+    // },
     // {
     //   icon: Bell,
     //   title: 'Alarm Monitoring',
@@ -80,7 +80,7 @@ const HomePage = () => {
     { icon: Home, title: 'Residential', description: 'Home security solutions' },
     { icon: Building, title: 'Commercial', description: 'Office & retail security' },
     // { icon: Factory, title: 'Industrial', description: 'Manufacturing security' },
-    { icon: Store, title: 'Retail', description: 'Store protection systems' }
+    // { icon: Store, title: 'Retail', description: 'Store protection systems' }
   ];
 
   const testimonials = [
@@ -114,9 +114,9 @@ const HomePage = () => {
     // "/smartlock.jpeg",
     // "/smart1.jpeg",
     // "/install1.jpeg",
-    "/install2.jpg",
-    "/cam1.jpg",
-    "/cam2.jpg",
+    // "/install2.jpg",
+    // "/cam1.jpg",
+    // "/cam2.jpg",
     "/dashinstall.jpg",
     "/dashwork.jpg",
     "/smartlock1.jpg",
@@ -192,7 +192,7 @@ const HomePage = () => {
               Comprehensive security solutions tailored to protect what matters most to you
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
             ))}
@@ -209,7 +209,7 @@ const HomePage = () => {
               Specialized security solutions for different sectors across Jamaica
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {industries.map((industry, index) => (
               <Card key={index} className="card-gradient hover:shadow-glow transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-6 text-center">

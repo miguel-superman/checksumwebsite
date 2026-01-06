@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Shield, Phone, MessageCircle ,Package, LetterTextIcon } from 'lucide-react';
+import { Menu, X, Shield, Phone, MessageCircle ,Receipt, LetterTextIcon } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,14 +60,20 @@ const Header = () => {
             </Button>
             <Button variant="cta" size="sm" asChild>
               <Link href="https://wa.me/18768592783" className="flex items-center gap-2">
-                <MessageCircle className="h-4 w-4" />
+                {/* <MessageCircle className="h-4 w-4" /> */}
+                <img
+                  src="/WhatsApp.png"
+                  alt="WhatsApp"
+                  className="h-5 w-5"
+                />
                 WhatsApp
               </Link>
             </Button>
             <Button variant="hero" size="sm">
 
               <Link href="/contact" className="flex items-center gap-2">
-                <Package className="h-4 w-4" />
+                {/* <Package className="h-4 w-4" /> */}
+                <Receipt className="h-4 w-4"/>
                 Request Quote
               </Link>
               
@@ -108,12 +114,20 @@ const Header = () => {
                 </Button>
                 <Button variant="cta" size="sm" asChild>
                   <Link href="https://wa.me/18768592783" className="flex items-center gap-2">
-                    <MessageCircle className="h-4 w-4" />
+                    {/* <MessageCircle className="h-4 w-4" /> */}
+                    <img
+                    src="/WhatsApp.png"
+                    alt="WhatsApp"
+                    className="h-5 w-5"
+                    />
                     WhatsApp
                   </Link>
                 </Button>
                 <Button variant="hero" size="sm">
-                  Free Quote
+                  <Link href="/contact" className="flex items-center gap-2">
+                    Free Quote
+                    <LetterTextIcon className="h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             </nav>

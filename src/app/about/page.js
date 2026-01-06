@@ -18,7 +18,7 @@ const AboutPage = () => {
         <section className="section-padding bg-gradient-hero ">
           <div className="container-section p-6 text-center space-y-6">
             <h1 className="text-hero text-6xl md:text-7xl font-bold">
-              About <span className="text-accent">Checksum Security</span>
+              About <span className="text-accent">Checksum</span>
             </h1>
             <p className="text-gray-700 max-w-2xl mx-auto text-lg">
               Trusted by businesses and homeowners across Jamaica, we deliver cutting-edge
@@ -72,7 +72,7 @@ const AboutPage = () => {
         </section>
 
         {/* Timeline / Experience */}
-        <section className="section-padding ">
+        {/* <section className="section-padding ">
           <div className="container-section p-6">
             <Card className="card-gradient">
               <CardHeader>
@@ -103,7 +103,7 @@ const AboutPage = () => {
               </CardContent>
             </Card>
           </div>
-        </section>
+        </section> */}
 
         {/* Team Section */}
         <section className="section-padding">
@@ -167,8 +167,8 @@ const AboutPage = () => {
           <div className="container-section text-center space-y-6 text-gray-300 p-6">
             <h2 className="text-3xl font-bold text-white">Ready to Secure Your Future?</h2>
             <p className="max-w-xl mx-auto text-lg text-gray-200">
-              Contact our experts today for a free consultation and discover how we can safeguard
-              your property with the latest in security technology.
+              Contact us and schedule an assessment to create your quote. 
+              Our security experts will design the perfect solution for your property.
             </p>
             <Button variant="cta" size="xl" asChild>
               <a href="/contact">Get Started</a>

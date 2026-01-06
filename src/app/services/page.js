@@ -4,7 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 // import ServiceCard from '@/components/ServiceCard';
 import Header from '../components/header';
 import Footer from '../components/footer';
-import { Camera, Lock, Bell, Wifi, ArrowRight, CheckCircle } from 'lucide-react';
+import { Camera, Lock, Bell, Wifi, ArrowRight, CheckCircle,Video } from 'lucide-react';
+import Link from 'next/link';
 
 const ServicesPage = () => {
   const services = [
@@ -24,19 +25,35 @@ const ServicesPage = () => {
       popular: true
     },
     {
-      icon: Lock,
-      title: 'Access Control Systems',
-      description: 'Secure entry solutions with biometric scanners, key cards, and remote access management for enhanced security.',
-      features: [
-        'Biometric fingerprint scanners',
-        'RFID key card systems',
-        'Mobile app access control',
-        'Multi-level user permissions',
-        'Audit trail & reporting',
-        'Integration with existing systems'
-      ],
-      href: '/services/access-control'
-    },
+        icon: Video, // or Car if you prefer a vehicle-related icon
+        title: 'Dash Cam Installation',
+        description: 'Professional dash cam installation for personal and commercial vehicles, ensuring reliable video recording, safety, and peace of mind on the road.',
+        features: [
+            'Front & rear dash cam installation',
+            '4K / Full HD recording support',
+            'Parking mode & motion detection setup',
+            'Hardwire installation for clean, hidden cabling',
+            'Mobile app configuration & testing',
+            'Professional installation & calibration'
+        ],
+        href: '/services/dash-cam',
+        popular: false
+    }
+
+    // {
+    //   icon: Lock,
+    //   title: 'Access Control Systems',
+    //   description: 'Secure entry solutions with biometric scanners, key cards, and remote access management for enhanced security.',
+    //   features: [
+    //     'Biometric fingerprint scanners',
+    //     'RFID key card systems',
+    //     'Mobile app access control',
+    //     'Multi-level user permissions',
+    //     'Audit trail & reporting',
+    //     'Integration with existing systems'
+    //   ],
+    //   href: '/services/access-control'
+    // },
     // {
     //   icon: Bell,
     //   title: 'Alarm Monitoring',
@@ -98,7 +115,7 @@ const ServicesPage = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
                         {services.map((service, index) => (
                         <Card key={index} className="card-gradient hover:shadow-glow transition-all duration-300 relative">
                             {service.popular && (
@@ -132,9 +149,11 @@ const ServicesPage = () => {
                                 <Button variant="security" className="flex-1" asChild>
                                 {/* <a href={service.href}>Learn More</a> */}
                                 </Button>
-                                <Button variant="cta">
-                                Get Quote
-                                </Button>
+                                <Link href="/contact" className="flex items-center gap-2">
+                                    <Button className="bg-teal-200 hover:bg-teal-500 text-accent-foreground" >
+                                    Get Quote
+                                    </Button>
+                                 </Link>
                             </div>
                             </CardContent>
                         </Card>
@@ -183,9 +202,11 @@ const ServicesPage = () => {
                                 <Button variant="security" className="flex-1" asChild>
                                 {/* <a href={service.href}>Learn More</a> */}
                                 </Button>
-                                <Button variant="cta">
-                                Get Quote
-                                </Button>
+                                 <Link href="/contact" className="flex items-center gap-2">
+                                    <Button className="bg-teal-200 hover:bg-teal-500 text-accent-foreground" >
+                                    Get Quote
+                                    </Button>
+                                 </Link>
                             </div>
                             </CardContent>
                         </Card>
@@ -249,7 +270,7 @@ const ServicesPage = () => {
                         <div className="max-w-3xl mx-auto space-y-6">
                             <h2 className="text-heading mt-8 mb-4 text-4xl text-white">Ready to Get Started?</h2>
                             <p className="text-body-large text-2xl text-gray-200">
-                            Contact us today for a free security assessment and custom quote. 
+                            Contact us and schedule an assessment to create your quote. 
                             Our security experts will design the perfect solution for your property.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
@@ -257,7 +278,7 @@ const ServicesPage = () => {
                                 Schedule An Assessment
                             </Button>
                             <Button variant="cta" size="xl">
-                                Call (876) 555-0123
+                                Call (876) 859-2783
                             </Button>
                             </div>
                         </div>

@@ -72,7 +72,7 @@ const ContactPage = () => {
               <span className="text-accent"> Experts</span>
             </h1>
             <p className="text-body-large text-gray-900 text-lg max-w-2xl mx-auto">
-              Ready to secure your property? Get in touch with our team for a free consultation 
+              Ready to secure your property? Get in touch with our team for a consultation 
               and custom security solution designed for your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -104,7 +104,7 @@ const ContactPage = () => {
                   <CardTitle className="text-2xl">Get Your Security Quote</CardTitle>
                   <p className="text-muted-foreground">
                     Fill out the form below and our security experts will contact you within 24 hours 
-                    to schedule your free on-site assessment.
+                    to schedule your on-site assessment.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -336,7 +336,7 @@ const ContactPage = () => {
                     <p>• Montego Bay</p>
                     <p>• And surrounding areas</p>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-4">
+                  <p className="text-md font-black text-black mt-4">
                     Don&apos;t see your area? Contact us - we may still be able to serve you.
                   </p>
                 </CardContent>

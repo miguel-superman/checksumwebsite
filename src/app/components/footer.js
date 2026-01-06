@@ -28,7 +28,7 @@ const Footer = () => {
 
             <p className="text-sm text-muted-foreground">
               Protecting homes and businesses across Jamaica with cutting-edge security
-              technology and 24/7 professional monitoring services.
+              technology and professional I.T. services.
             </p>
 
             <div className="flex space-x-3">
@@ -62,12 +62,12 @@ const Footer = () => {
               <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 CCTV Systems
               </Link>
-              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              {/* <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Access Control
-              </Link>
-              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              </Link> */}
+              {/* <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Alarm Monitoring
-              </Link>
+              </Link> */}
               <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
                 Networking Solutions
               </Link>
@@ -98,27 +98,30 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 text-accent" />
-                <a href="tel:+1876859-2783" className="hover:text-accent transition-colors">
+                <Phone className="h-5 w-5 text-teal-400" />
+                <a href="tel:+1876859-2783" className="hover:text-teal-700 transition-colors">
                   +1 (876) 859-2783
                 </a>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 text-accent" />
-                <a href="mailto:sales@cs3.ltd" className="hover:text-accent transition-colors">
+                <Mail className="h-5 w-5 text-teal-400" />
+                <a href="mailto:sales@cs3.ltd" className="hover:text-teal-700 transition-colors">
                   sales@cs3.ltd
                 </a>
               </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 text-accent mt-0.5" />
-                <span>Kingston, Jamaica</span>
+              <div className="flex items-start space-x-2 text-sm text-muted-foreground ">
+                {/* <Button variant="cta" size="sm"  > */}
+                    <Link href="https://wa.me/18768592783" className="flex items-center gap-1">
+                    {/* <MessageCircle className="h-4 w-4" /> */}
+                    <img
+                      src="/WhatsApp.png"
+                      alt="WhatsApp"
+                      className="h-5 w-5"
+                      />
+                    WhatsApp
+                  </Link>
+                {/* </Button> */}
               </div>
-              <Button variant="cta" size="sm" className="w-full" asChild>
-                <a href="https://wa.me/18768592783" className="flex items-center gap-2 justify-center">
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp Us
-                </a>
-              </Button>
             </div>
           </div>
         </div>
