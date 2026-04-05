@@ -132,7 +132,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               © {currentYear} Checksum Smart Security Solutions. All rights reserved.
             </p>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
+            {/* <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
               <Link href="/privacy-policy-2" className="hover:text-accent transition-colors">
                 Privacy Policy
               </Link>
@@ -148,7 +148,7 @@ const Footer = () => {
               <Link href="/" className="hover:text-accent transition-colors">
                 Shipping
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -62,23 +62,27 @@ const ContactPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-sky-500  to-gray-800">
+      <main className="min-h-screen bg-gradient-to-b from-cyan-500 to-zinc-800">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-hero">
+      <section className="section-padding bg-gradient-hero py-48 md:py-96">
         <div className="container-section p-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-hero text-7xl text-foreground">
               Contact Our Security 
               <span className="text-accent"> Experts</span>
             </h1>
-            <p className="text-body-large text-gray-900 text-lg max-w-2xl mx-auto">
+            <p className="text-body-large text-zinc-900 text-lg max-w-2xl mx-auto">
               Ready to secure your property? Get in touch with our team for a consultation 
               and custom security solution designed for your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button variant="cta" size="xl" asChild>
                 <a href="https://wa.me/18768592783" className="flex items-center gap-2">
-                  <MessageCircle className="h-5 w-5" />
+                  <img
+                    src="/WhatsApp.png"
+                    alt="WhatsApp"
+                    className="h-5 w-5"
+                    />
                   WhatsApp Now
                 </a>
               </Button>
@@ -223,7 +227,7 @@ const ContactPage = () => {
                       by our team regarding your security needs.
                     </p> */}
 
-                     <Button type="submit" variant="hero" size="lg" className="w-full border hover:border-teal-500" disabled={isSubmitting}>
+                     <Button type="submit" variant="hero" size="lg" className="w-full border hover:border-cyan-500" disabled={isSubmitting}>
                         <Send className="h-5 w-5 mr-2" />
                         {isSubmitting ? 'Sending...' : 'Send Message & Schedule Assessment'}
                       </Button>
@@ -248,11 +252,11 @@ const ContactPage = () => {
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                      <Phone className="h-5 w-5 text-teal-500" />
+                      <Phone className="h-5 w-5 text-cyan-500" />
                     </div>
                     <div>
                       <p className="font-medium">Call Us</p>
-                      <a href="tel:+1876-859-2783" className="text-sm text-muted-foreground hover:text-gray-400">
+                      <a href="tel:+1876-859-2783" className="text-sm text-muted-foreground hover:text-zinc-400">
                         +1 (876) 859-2783
                       </a>
                     </div>
@@ -260,7 +264,7 @@ const ContactPage = () => {
 
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                      <Mail className="h-5 w-5 text-teal-500" />
+                      <Mail className="h-5 w-5 text-cyan-500" />
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
@@ -272,7 +276,7 @@ const ContactPage = () => {
 
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                      <MapPin className="h-5 w-5 text-teal-500" />
+                      <MapPin className="h-5 w-5 text-cyan-500" />
                     </div>
                     <div>
                       <p className="font-medium">Office</p>
@@ -296,7 +300,7 @@ const ContactPage = () => {
               <Card className="card-gradient">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-teal-500" />
+                    <Clock className="h-5 w-5 text-cyan-500" />
                     Business Hours
                   </CardTitle>
                 </CardHeader>
@@ -369,6 +373,11 @@ const ContactPage = () => {
       </section> */}
 
       <section className='py-8'>
+        <section className="section-padding ">
+          <div className="container-section grid grid-cols-1 md:grid-cols-3 gap-8 py-24">
+            
+          </div>
+        </section>
         
       </section>
     </main>

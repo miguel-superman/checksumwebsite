@@ -34,6 +34,58 @@ exports.sendContactMessageEmail = onDocumentCreated("CustomerMessages/{messageId
     `,
   };
 
+  exports.sendQuoteRequestEmail = onDocumentCreated(
+    "ProductRequests/{requestId}",
+    async (event) => {
+      const data = event.data.data();
+      if (!data) return;
+
+      const { cartItems, customer, totals, status, createdAt } = data;
+
+      const rows = cartItems.map(item => `
+        <tr>
+          <td>
+            <strong>${item.name}</strong><br/>
+            Qty: ${item.qty}<br/>
+            Installation: ${item.includeInstallation ? "Yes" : "No"}
+          </td>
+          <td align="right">
+            ${(item.price * item.qty) / 100} JMD
+          </td>
+        </tr>
+      `).join("");
+
+      await transporter.sendMail({
+        from: process.env.NEXT_PUBLIC_GMAIL_APP_USER,
+        to: "sales@cs3.ltd",
+        subject: "🛠️ New Installation / Quote Request",
+        html: `
+          <h2>New Quote Request</h2>
+
+          <h3>Customer</h3>
+          <p>
+            ${customer.name}<br/>
+            ${customer.email}<br/>
+            ${customer.phone}<br/>
+            ${customer.address}
+          </p>
+
+          <h3>Requested Items</h3>
+          <table width="100%">
+            ${rows}
+          </table>
+
+          <h3>Total</h3>
+          <p><strong>${totals.subtotal / 100} JMD</strong></p>
+
+          <p>Status: ${status}</p>
+          <p>Created: ${createdAt.toDate()}</p>
+        `,
+      });
+    }
+  );
+
+
   try {
     await transporter.sendMail(mailOptions);
     console.log("✅ Contact form email sent successfully!");

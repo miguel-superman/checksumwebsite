@@ -12,15 +12,15 @@ const AboutPage = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-b from-sky-500 to-gray-800">
+      <main className="min-h-screen bg-gradient-to-b from-cyan-500 to-zinc-800">
         
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-hero ">
+        <section className="section-padding bg-gradient-hero py-48 md:py-96">
           <div className="container-section p-6 text-center space-y-6">
             <h1 className="text-hero text-6xl md:text-7xl font-bold">
               About <span className="text-accent">Checksum</span>
             </h1>
-            <p className="text-gray-700 max-w-2xl mx-auto text-lg">
+            <p className="text-zinc-700 max-w-2xl mx-auto text-lg">
               Trusted by businesses and homeowners across Jamaica, we deliver cutting-edge
               security solutions tailored to your needs. 
             </p>
@@ -32,7 +32,7 @@ const AboutPage = () => {
           <div className="container-section grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
             <Card className="card-gradient text-center">
               <CardHeader>
-                <Shield className="w-10 h-10 text-teal-500 mx-auto" />
+                <Shield className="w-10 h-10 text-cyan-500 mx-auto" />
                 <CardTitle className={"text-2xl"}>Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
@@ -44,7 +44,7 @@ const AboutPage = () => {
 
             <Card className="card-gradient text-center">
               <CardHeader>
-                <Target className="w-10 h-10 text-teal-500 mx-auto" />
+                <Target className="w-10 h-10 text-cyan-500 mx-auto" />
                 <CardTitle className={"text-2xl"}>Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
@@ -56,7 +56,7 @@ const AboutPage = () => {
 
             <Card className="card-gradient text-center">
               <CardHeader>
-                <Star className="w-10 h-10 text-teal-500 mx-auto" />
+                <Star className="w-10 h-10 text-cyan-500 mx-auto" />
                 <CardTitle className={"text-2xl"}>Our Values</CardTitle>
               </CardHeader>
               <CardContent>
@@ -71,13 +71,20 @@ const AboutPage = () => {
           </div>
         </section>
 
+        <section className="section-padding ">
+          <div className="container-section grid grid-cols-1 md:grid-cols-3 gap-8 py-24">
+            
+          </div>
+        </section>
+
+
         {/* Timeline / Experience */}
         {/* <section className="section-padding ">
           <div className="container-section p-6">
             <Card className="card-gradient">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Briefcase className="h-6 w-6 text-teal-500" />
+                  <Briefcase className="h-6 w-6 text-cyan-500" />
                   Our Journey
                 </CardTitle>
               </CardHeader>
@@ -117,11 +124,11 @@ const AboutPage = () => {
             <div className='justify-between grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-8'>
               <div>
 
-                <h1 className=" text-teal-200 text-6xl md:text-7xl font-bold mb-10 md:mb-22">
+                <h1 className=" text-cyan-200 text-6xl md:text-7xl font-bold mb-10 md:mb-22">
                   Who <span className="text-accent">We Are</span>
                 </h1>
 
-                <p className="text-white font-bold text-lg md:text-xl max-w-2xl mx-auto mb-20">
+                <p className="text-zinc-800 font-bold text-lg md:text-xl max-w-2xl mx-auto mb-20 tracking-wide leading-8">
                     Established in 2021, Checksum Smart Security Solutions Limited (CS³) was founded by a group of Information Technology (IT) specialists, unified by a vision, mutual desires and abilities, to address growing technological needs for IT products and services in the Caribbean and, by extension, the world. 
 
                     Checksum’s initial focus mainly consisted of Closed-circuit Television (CCTV) surveillance and motor vehicle camera system products and services. As Checksum continues to develop, its focus has expanded to include Information Communication and Technology (ICT) infrastructure consultation, installation and support, cloud infrastructure implementation and support, as well as IT training and smart technological solutions.
@@ -142,7 +149,7 @@ const AboutPage = () => {
               
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-48">
               {[ 
                 { name: 'Peter Ferguson', role: 'Director & Chairman' },
                 { name: 'Daniel Nelson', role: 'Director & Operations Manager' },
@@ -151,7 +158,7 @@ const AboutPage = () => {
                 <Card key={i} className="card-gradient text-center">
                   <CardContent className="pt-6 space-y-3">
                     <div className="w-24 h-24 rounded-full bg-accent/10 mx-auto flex items-center justify-center">
-                      <Users className="w-10 h-10 text-teal-500" />
+                      <Users className="w-10 h-10 text-cyan-500" />
                     </div>
                     <p className="font-medium">{member.name}</p>
                     <p className="text-sm text-muted-foreground">{member.role}</p>
@@ -162,17 +169,28 @@ const AboutPage = () => {
           </div>
         </section>
 
+        <section className="section-padding ">
+          <div className="container-section grid grid-cols-1 md:grid-cols-3 gap-8 py-24">
+            
+          </div>
+        </section>
+
         {/* Call to Action */}
         <section className="section-padding ">
-          <div className="container-section text-center space-y-6 text-gray-300 p-6">
+          <div className="container-section text-center space-y-6 text-zinc-300 p-6">
             <h2 className="text-3xl font-bold text-white">Ready to Secure Your Future?</h2>
-            <p className="max-w-xl mx-auto text-lg text-gray-200">
+            <p className="max-w-xl mx-auto text-lg text-zinc-200">
               Contact us and schedule an assessment to create your quote. 
               Our security experts will design the perfect solution for your property.
             </p>
             <Button variant="cta" size="xl" asChild>
               <a href="/contact">Get Started</a>
             </Button>
+          </div>
+        </section>
+        <section className="section-padding ">
+          <div className="container-section grid grid-cols-1 md:grid-cols-3 gap-8 py-24">
+            
           </div>
         </section>
       </main>
