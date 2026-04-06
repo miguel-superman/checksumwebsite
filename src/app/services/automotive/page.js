@@ -1,7 +1,11 @@
+"use client"
+
 import Link from "next/link";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import { Car, Camera, ShieldCheck } from "lucide-react";
+import { useEffect } from "react";
+import { animate } from "animejs";
 
 export default function AutomotivePage() {
   const features = [
@@ -24,6 +28,43 @@ export default function AutomotivePage() {
       icon: ShieldCheck,
     },
   ];
+
+  useEffect(() => {
+  const icons = document.querySelectorAll(".feature-icon");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          animate(entry.target, {
+            translateY: [-20, 0],
+            opacity: [0, 1],
+            scale: [0.8, 1],
+            duration: 800,
+            easing: "easeOutExpo",
+            delay: index * 150,
+          });
+
+          // Start idle animation AFTER reveal
+          // animate(entry.target, {
+          //   translateY: [-6, 6],
+          //   duration: 2000,
+          //   loop: true,
+          //   direction: "alternate",
+          //   easing: "easeInOutSine",
+          // });
+
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  icons.forEach((icon) => observer.observe(icon));
+
+  return () => observer.disconnect();
+}, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-300 to-gray-500">
@@ -73,13 +114,38 @@ export default function AutomotivePage() {
           const Icon = item.icon;
 
           return (
+            // <div
+            //   key={i}
+            //   className="bg-white/90 p-6 rounded-xl hover:shadow-xl hover:scale-[1.02] transition"
+            // >
             <div
               key={i}
-              className="bg-white/90 p-6 rounded-xl hover:shadow-xl hover:scale-[1.02] transition"
+              className="feature-card bg-white/90 p-6 rounded-xl hover:shadow-xl hover:scale-[1.02] transition"
+              onMouseEnter={(e) => {
+                const icon = e.currentTarget.querySelector(".feature-icon");
+
+                animate(icon, {
+                  rotate: "1turn",
+                  scale: 1.2,
+                  duration: 600,
+                  easing: "easeOutBack",
+                });
+              }}
+              onMouseLeave={(e) => {
+                const icon = e.currentTarget.querySelector(".feature-icon");
+
+                animate(icon, {
+                  scale: 1,
+                  duration: 300,
+                  easing: "easeOutQuad",
+                });
+              }}
             >
               {/* Icon */}
               <div className="w-14 h-14 flex items-center justify-center bg-cyan-500/10 rounded-lg mb-4">
-                <Icon className="text-cyan-500 w-7 h-7" />
+                {/* <Icon className="text-cyan-500 w-7 h-7" /> */}
+                <Icon className="feature-icon text-cyan-500 w-7 h-7" />
+                
               </div>
 
               {/* Title */}

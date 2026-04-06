@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               {/* <Image src='/checksum-logo.png' alt='checksum logo' width={180} height={180} /> */}
-              <img src='/checksum-logo.png'  alt='checksum logo' className="w-40 h-40" />
+              <img src='/checksum-logo.png'  alt='checksum logo' className="w-60 h-60" />
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-none">Checksum</span>
                 <span className="text-xs text-muted-foreground leading-none">
@@ -26,7 +26,7 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="text-sm text-muted-foreground">
+            <p className="text-lg text-muted-foreground">
               Protecting homes and businesses across Jamaica with cutting-edge security
               technology and professional I.T. services.
             </p>
@@ -57,18 +57,18 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Services</h3>
+            <h3 className="font-semibold text-foreground text-xl">Services</h3>
             <div className="space-y-2">
-              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              <Link href="/services" className="block text-lg text-muted-foreground hover:text-teal-700 transition-colors">
                 CCTV Systems
               </Link>
-              {/* <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              {/* <Link href="/services" className="block text-lg text-muted-foreground hover:text-teal-700 transition-colors">
                 Access Control
               </Link> */}
-              {/* <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              {/* <Link href="/services" className="block text-lg text-muted-foreground hover:text-teal-700 transition-colors">
                 Alarm Monitoring
               </Link> */}
-              <Link href="/services" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              <Link href="/services" className="block text-lg text-muted-foreground hover:text-teal-700 transition-colors">
                 Networking Solutions
               </Link>
             </div>
@@ -76,9 +76,9 @@ const Footer = () => {
 
           {/* Company */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Company</h3>
+            <h3 className="font-semibold text-foreground text-xl">Company</h3>
             <div className="space-y-2">
-              <Link href="/about" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
+              <Link href="/about" className="block text-lg text-muted-foreground transition-colors hover:text-teal-700">
                 About Us
               </Link>
               {/* <Link href="/case-studies" className="block text-sm text-muted-foreground hover:text-accent transition-colors">
@@ -95,28 +95,28 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Contact</h3>
+            <h3 className="font-semibold text-foreground text-xl">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-2 text-lg text-muted-foreground">
                 <Phone className="h-5 w-5 text-teal-400" />
                 <a href="tel:+1876859-2783" className="hover:text-teal-700 transition-colors">
                   +1 (876) 859-2783
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-2 text-lg text-muted-foreground">
                 <Mail className="h-5 w-5 text-teal-400" />
                 <a href="mailto:sales@cs3.ltd" className="hover:text-teal-700 transition-colors">
                   sales@cs3.ltd
                 </a>
               </div>
-              <div className="flex items-start space-x-2 text-sm text-muted-foreground ">
+              <div className="flex items-start space-x-2 text-lg text-muted-foreground hover:text-teal-700">
                 {/* <Button variant="cta" size="sm"  > */}
                     <Link href="https://wa.me/18768592783" className="flex items-center gap-1">
                     {/* <MessageCircle className="h-4 w-4" /> */}
                     <img
                       src="/WhatsApp.png"
                       alt="WhatsApp"
-                      className="h-5 w-5"
+                      className="h-5 w-5 "
                       />
                     WhatsApp
                   </Link>

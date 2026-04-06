@@ -126,4 +126,9 @@ Modern dark theme with professional security company aesthetic
     box-shadow: var(--shadow-glow);
     transform: translateY(-2px);
   }
+
+  .feature-icon {
+  display: inline-block;
+  will-change: transform, opacity;
+}
 }

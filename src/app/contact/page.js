@@ -64,7 +64,7 @@ const ContactPage = () => {
       <Header />
       <main className="min-h-screen bg-gradient-to-b from-cyan-500 to-zinc-800">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-hero py-48 md:py-96">
+      {/* <section className="section-padding bg-gradient-hero py-48 md:py-96">
         <div className="container-section p-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-hero text-7xl text-foreground">
@@ -95,7 +95,7 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form & Info */}
       <section className="section-padding">

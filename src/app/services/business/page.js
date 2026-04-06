@@ -1,8 +1,10 @@
-
+"use client"
 
 import Link from "next/link";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
+import { useEffect } from "react";
+import { animate } from "animejs";
 // import { Building2, ShieldCheck, Users } from "lucide-react";
 // import { Building2, ShieldCheck, CheckCircle, Wifi , Users} from "lucide-react";
 
@@ -56,6 +58,43 @@ export default function BusinessPage() {
     icon: Wrench,
   },
 ];
+
+    useEffect(() => {
+    const icons = document.querySelectorAll(".feature-icon");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            animate(entry.target, {
+              translateY: [-20, 0],
+              opacity: [0, 1],
+              scale: [0.8, 1],
+              duration: 800,
+              easing: "easeOutExpo",
+              delay: index * 150,
+            });
+
+            // Start idle animation AFTER reveal
+            // animate(entry.target, {
+            //   translateY: [-6, 6],
+            //   duration: 2000,
+            //   loop: true,
+            //   direction: "alternate",
+            //   easing: "easeInOutSine",
+            // });
+
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    icons.forEach((icon) => observer.observe(icon));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-300 to-gray-500">
@@ -117,11 +156,30 @@ export default function BusinessPage() {
           return (
             <div
               key={i}
-              className="bg-zinc-900/60 p-6 rounded-xl hover:bg-zinc-800 transition"
+              className="feature-card bg-zinc-900/60 p-6 rounded-xl hover:bg-zinc-800 transition"
+              onMouseEnter={(e) => {
+                const icon = e.currentTarget.querySelector(".feature-icon");
+
+                animate(icon, {
+                  scale: 1.25,
+                  rotate: "1turn",
+                  duration: 600,
+                  easing: "easeOutBack",
+                });
+              }}
+              onMouseLeave={(e) => {
+                const icon = e.currentTarget.querySelector(".feature-icon");
+
+                animate(icon, {
+                  scale: 1,
+                  duration: 300,
+                  easing: "easeOutQuad",
+                });
+              }}
             >
               {/* Icon */}
               <div className="w-14 h-14 flex items-center justify-center bg-cyan-500/10 rounded-lg mb-4">
-                <Icon className="text-cyan-500 w-7 h-7" />
+                <Icon className="feature-icon  text-cyan-500 w-7 h-7" />
               </div>
 
               {/* Title */}
@@ -165,11 +223,31 @@ export default function BusinessPage() {
         </p>
       </div> */}
 
-        <div className="mt-12 p-8 border rounded-2xl flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition duration-300 mx-4">
+        <div className="featurte-card mt-12 p-8 border rounded-2xl flex flex-col items-center text-center hover:shadow-xl hover:scale-[1.02] transition duration-300 mx-4"
+             onMouseEnter={(e) => {
+                const icon = e.currentTarget.querySelector(".feature-icon");
+
+                animate(icon, {
+                  scale: 1.25,
+                  rotate: "1turn",
+                  duration: 600,
+                  easing: "easeOutBack",
+                });
+              }}
+              onMouseLeave={(e) => {
+                const icon = e.currentTarget.querySelector(".feature-icon");
+
+                animate(icon, {
+                  scale: 1,
+                  duration: 300,
+                  easing: "easeOutQuad",
+                });
+              }}
+        >
           
           {/* Icon with background + glow */}
           <div className="w-16 h-16 flex items-center justify-center rounded-full bg-cyan-500/10 mb-4 shadow-md">
-            <Wifi className="text-cyan-500 w-8 h-8" />
+            <Wifi className="feature-icon text-cyan-500 w-8 h-8" />
           </div>
 
 

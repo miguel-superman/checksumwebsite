@@ -224,9 +224,9 @@ const Header = () => {
     { name: "Proucts", path: "/shop" ,
       hasDropdown: true,
       dropdown: [
-        { name: "Residential", path: "/services/cctv" },
-        { name: "Business", path: "/services/access-control" },
-        { name: "Automotive", path: "/services/alarm-systems" },
+        { name: "Residential", path: "/products/residential" },
+        { name: "Business", path: "/products/business" },
+        { name: "Automotive", path: "/products/automotive" },
       ],
 
     },

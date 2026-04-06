@@ -18,8 +18,13 @@ import {
   Store,
   ArrowRight,
   Phone,
-  MessageCircle
+  MessageCircle,
+  Brain, 
+  Smartphone, 
+  Cloud, 
+  Wrench 
 } from 'lucide-react';
+
 
 import ImageCarousel from './ImageCarousel';
 import Link from 'next/link';
